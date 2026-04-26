@@ -1,0 +1,138 @@
+name: 🔄 Auto-Process New Materials
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  process-material:
+    if: github.event.label.name == 'new-material'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install -g json5
+      
+      - name: Process submission
+        id: process
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          # Estrai il JSON dal corpo dell'issue
+          echo "$ISSUE_BODY" | grep -A 100 "Material JSON Data" | \
+          grep -E '^\s*[\{\"]' | \
+          sed 's/^> //' | \
+          python3 -c "
+          import sys, json, re
+          body = sys.stdin.read()
+          # Trova il blocco JSON
+          match = re.search(r'(\{[\s\S]*\})', body)
+          if match:
+            try:
+              mat = json.loads(match.group(1))
+              # Validazione base
+              required = ['name', 'family', 'wvtrValues', 'otrValues', 'validConditions']
+              if all(k in mat for k in required):
+                with open('new_material.json', 'w') as f:
+                  json.dump(mat, f)
+                print('VALID::' + mat['name'])
+              else:
+                print('INVALID::Missing fields')
+            except:
+              print('INVALID::Parse error')
+          else:
+            print('INVALID::No JSON found')
+          " > result.txt
+          
+          RESULT=$(cat result.txt)
+          echo "result=$RESULT" >> $GITHUB_OUTPUT
+      
+      - name: Create branch and update DB
+        if: startsWith(steps.process.outputs.result, 'VALID::')
+        run: |
+          MAT_NAME=$(echo "${{ steps.process.outputs.result }}" | cut -d'::' -f2)
+          BRANCH_NAME="add-material-$(echo "$MAT_NAME" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9-')"
+          
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH_NAME"
+          
+          # Merge con materials.json esistente
+          python3 << 'EOF'
+          import json
+          
+          # Carica DB esistente
+          with open('materials.json', 'r') as f:
+              db = json.load(f)
+          
+          # Carica nuovo materiale
+          with open('new_material.json', 'r') as f:
+              new_mat = json.load(f)
+          
+          # Controlla duplicati
+          existing = [m['name'].lower() for m in db['materials']]
+          if new_mat['name'].lower() not in existing:
+              db['materials'].append(new_mat)
+              db['lastUpdated'] = {"date": "__DATE__", "contributor": "__CONTRIBUTOR__"}
+              
+              with open('materials.json', 'w') as f:
+                  json.dump(db, f, indent=2, ensure_ascii=False)
+              print("MERGED")
+          else:
+              print("DUPLICATE")
+          EOF
+          sed -i "s/__DATE__/$(date -Iseconds)/g; s/__CONTRIBUTOR__/@${{ github.actor }}/g" materials.json
+          
+          git add materials.json
+          git commit -m "feat: add $MAT_NAME (via #${{ github.event.issue.number }})"
+          git push origin "$BRANCH_NAME"
+      
+      - name: Create Pull Request
+        if: startsWith(steps.process.outputs.result, 'VALID::')
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: ${{ steps.process.outputs.branch }}
+          title: "🧪 Add: ${{ steps.process.outputs.result }}"
+          body: |
+            Auto-generated PR from issue #${{ github.event.issue.number }}
+            
+            Submitted by: @${{ github.actor }}
+            
+            ✅ Validated
+            ✅ No duplicates detected
+            
+            /auto-merge
+          labels: |
+            auto-merge
+            new-material
+          draft: false
+      
+      - name: Comment on issue
+        run: |
+          if [[ "${{ steps.process.outputs.result }}" == VALID::* ]]; then
+            gh issue comment ${{ github.event.issue.number }} \
+              -b "✅ **Submission received!**<br><br>A pull request has been automatically created: #<PR_NUMBER><br><br>Once merged, your material will be available to all users via **Sync DB**." \
+              --repo ${{ github.repository }}
+          else
+            gh issue comment ${{ github.event.issue.number }} \
+              -b "❌ **Validation failed**: ${{ steps.process.outputs.result }}<br><br>Please check the format and resubmit." \
+              --repo ${{ github.repository }}
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
