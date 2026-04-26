@@ -1,0 +1,829 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-01-15",
+  "materials": [
+    {
+      "name": "PET",
+      "family": "PET",
+      "wvtrValues": [
+        {"value": 1.0, "thickness": 500},
+        {"value": 2.0, "thickness": 500},
+        {"value": 4.0, "thickness": 500}
+      ],
+      "otrValues": [
+        {"value": 150, "thickness": 500},
+        {"value": 200, "thickness": 500},
+        {"value": 350, "thickness": 500}
+      ],
+      "validConditions": [
+        {"temperature": 23, "humidity": 50},
+        {"temperature": 38, "humidity": 50},
+        {"temperature": 50, "humidity": 50}
+      ]
+    },
+    {
+      "name": "Nylon 6 (multi-temp)",
+      "family": "PA",
+      "wvtrValues": [
+        {"value": 10.0, "thickness": 100},
+        {"value": 25.0, "thickness": 100},
+        {"value": 50.0, "thickness": 100}
+      ],
+      "otrValues": [
+        {"value": 30, "thickness": 100},
+        {"value": 60, "thickness": 100},
+        {"value": 120, "thickness": 100}
+      ],
+      "validConditions": [
+        {"temperature": 23, "humidity": 60},
+        {"temperature": 38, "humidity": 60},
+        {"temperature": 50, "humidity": 60}
+      ]
+    },
+    {
+      "name": "LDPE (multi-temp)",
+      "family": "PE",
+      "wvtrValues": [
+        {"value": 0.8, "thickness": 100},
+        {"value": 1.5, "thickness": 100},
+        {"value": 2.8, "thickness": 100}
+      ],
+      "otrValues": [
+        {"value": 800, "thickness": 100},
+        {"value": 1200, "thickness": 100},
+        {"value": 2000, "thickness": 100}
+      ],
+      "validConditions": [
+        {"temperature": 20, "humidity": 50},
+        {"temperature": 30, "humidity": 50},
+        {"temperature": 40, "humidity": 50}
+      ]
+    },
+    {
+      "name": "EVOH (multi-temp)",
+      "family": "EVOH",
+      "wvtrValues": [
+        {"value": 0.05, "thickness": 100},
+        {"value": 0.15, "thickness": 100},
+        {"value": 0.40, "thickness": 100}
+      ],
+      "otrValues": [
+        {"value": 0.5, "thickness": 100},
+        {"value": 1.5, "thickness": 100},
+        {"value": 4.0, "thickness": 100}
+      ],
+      "validConditions": [
+        {"temperature": 23, "humidity": 50},
+        {"temperature": 38, "humidity": 50},
+        {"temperature": 50, "humidity": 50}
+      ]
+    },
+    {
+      "name": "PP (multi-temp)",
+      "family": "PP",
+      "wvtrValues": [
+        {"value": 0.5, "thickness": 50},
+        {"value": 1.0, "thickness": 50},
+        {"value": 2.0, "thickness": 50}
+      ],
+      "otrValues": [
+        {"value": 500, "thickness": 50},
+        {"value": 800, "thickness": 50},
+        {"value": 1500, "thickness": 50}
+      ],
+      "validConditions": [
+        {"temperature": 25, "humidity": 60},
+        {"temperature": 38, "humidity": 60},
+        {"temperature": 50, "humidity": 60}
+      ]
+    },
+    {
+      "name": "Polyurethane",
+      "family": "PU",
+      "wvtrValues": [{"value": 0.3, "thickness": 200}],
+      "otrValues": [{"value": 100, "thickness": 200}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Low-Density Polyethylene (LDPE)",
+      "family": "PE",
+      "wvtrValues": [{"value": 1.2, "thickness": 100}],
+      "otrValues": [{"value": 7500, "thickness": 100}],
+      "validConditions": [{"temperature": 23, "humidity": 50}]
+    },
+    {
+      "name": "Biaxially Oriented Polypropylene (BOPP)",
+      "family": "PP",
+      "wvtrValues": [{"value": 0.8, "thickness": 50}],
+      "otrValues": [{"value": 2000, "thickness": 50}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Rigid PVC",
+      "family": "PVC",
+      "wvtrValues": [{"value": 1.5, "thickness": 500}],
+      "otrValues": [{"value": 130, "thickness": 500}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyester (PET)",
+      "family": "PET",
+      "wvtrValues": [{"value": 3.0, "thickness": 500}],
+      "otrValues": [{"value": 69, "thickness": 500}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Ethylene Vinyl Alcohol (EVOH)",
+      "family": "EVOH",
+      "wvtrValues": [{"value": 0.1, "thickness": 100}],
+      "otrValues": [{"value": 0.15, "thickness": 100}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Aluminum",
+      "family": "AL",
+      "wvtrValues": [{"value": 0.01, "thickness": 20}],
+      "otrValues": [{"value": 0.005, "thickness": 20}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Nylon 6",
+      "family": "PA",
+      "wvtrValues": [{"value": 25.0, "thickness": 100}],
+      "otrValues": [{"value": 35, "thickness": 100}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "High-Density Polyethylene (HDPE)",
+      "family": "PE",
+      "wvtrValues": [{"value": 0.5, "thickness": 1000}],
+      "otrValues": [{"value": 2800, "thickness": 1000}],
+      "validConditions": [{"temperature": 38, "humidity": 50}]
+    },
+    {
+      "name": "PVDC (Saran)",
+      "family": "PVC",
+      "wvtrValues": [{"value": 0.4, "thickness": 50}],
+      "otrValues": [{"value": 6, "thickness": 50}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "PET/EVOH Laminate",
+      "family": "EVOH",
+      "wvtrValues": [{"value": 0.2, "thickness": 400}],
+      "otrValues": [{"value": 0.5, "thickness": 400}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Expanded Polyethylene",
+      "family": "PE",
+      "wvtrValues": [{"value": 15.0, "thickness": 3000}],
+      "otrValues": [{"value": 5000, "thickness": 3000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Butyl Rubber",
+      "family": "Other",
+      "wvtrValues": [{"value": 50.0, "thickness": 1000}],
+      "otrValues": [{"value": 200, "thickness": 1000}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Silicone",
+      "family": "Other",
+      "wvtrValues": [{"value": 1500.0, "thickness": 100}],
+      "otrValues": [{"value": 15000, "thickness": 100}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Tyvek",
+      "family": "Other",
+      "wvtrValues": [{"value": 70.0, "thickness": 500}],
+      "otrValues": [{"value": 8000, "thickness": 500}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Kraft Paper",
+      "family": "Paper",
+      "wvtrValues": [{"value": 500.0, "thickness": 300}],
+      "otrValues": [{"value": 50000, "thickness": 300}],
+      "validConditions": [{"temperature": 23, "humidity": 50}]
+    },
+    {
+      "name": "Waxed Paper",
+      "family": "Paper",
+      "wvtrValues": [{"value": 300.0, "thickness": 200}],
+      "otrValues": [{"value": 20000, "thickness": 200}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "PTFE Fabric",
+      "family": "PTFE",
+      "wvtrValues": [{"value": 1000.0, "thickness": 100}],
+      "otrValues": [{"value": 20000, "thickness": 100}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "GORE-TEX Membrane",
+      "family": "PTFE",
+      "wvtrValues": [{"value": 50.0, "thickness": 500}],
+      "otrValues": [{"value": 5000, "thickness": 500}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Biaxially Oriented Polypropylene Film",
+      "family": "PP",
+      "wvtrValues": [{"value": 5.0, "thickness": 20}],
+      "otrValues": [{"value": 2000, "thickness": 20}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Flexible PVC Film",
+      "family": "PVC",
+      "wvtrValues": [{"value": 2.2, "thickness": 150}],
+      "otrValues": [{"value": 2000, "thickness": 150}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "Polyurethane Film",
+      "family": "PU",
+      "wvtrValues": [{"value": 0.4, "thickness": 150}],
+      "otrValues": [{"value": 120, "thickness": 150}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Crosslinked Polyethylene",
+      "family": "PE",
+      "wvtrValues": [{"value": 1.0, "thickness": 80}],
+      "otrValues": [{"value": 6000, "thickness": 80}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Nylon 6.6",
+      "family": "PA",
+      "wvtrValues": [{"value": 20.0, "thickness": 100}],
+      "otrValues": [{"value": 40, "thickness": 100}],
+      "validConditions": [{"temperature": 38, "humidity": 80}]
+    },
+    {
+      "name": "Metallized Polyester",
+      "family": "PET",
+      "wvtrValues": [{"value": 0.8, "thickness": 200}],
+      "otrValues": [{"value": 1.0, "thickness": 200}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "High-Barrier Polyethylene",
+      "family": "PE",
+      "wvtrValues": [{"value": 0.6, "thickness": 300}],
+      "otrValues": [{"value": 3000, "thickness": 300}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "High-Barrier Polypropylene",
+      "family": "PP",
+      "wvtrValues": [{"value": 0.9, "thickness": 250}],
+      "otrValues": [{"value": 2500, "thickness": 250}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyimide (Kapton)",
+      "family": "Other",
+      "wvtrValues": [{"value": 45.0, "thickness": 100}],
+      "otrValues": [{"value": 500, "thickness": 100}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Polysulfide",
+      "family": "Other",
+      "wvtrValues": [{"value": 1.8, "thickness": 500}],
+      "otrValues": [{"value": 80, "thickness": 500}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyetherimide",
+      "family": "Other",
+      "wvtrValues": [{"value": 40.0, "thickness": 200}],
+      "otrValues": [{"value": 450, "thickness": 200}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Polyether Ether Ketone (PEEK)",
+      "family": "Other",
+      "wvtrValues": [{"value": 3.5, "thickness": 500}],
+      "otrValues": [{"value": 150, "thickness": 500}],
+      "validConditions": [{"temperature": 35, "humidity": 50}]
+    },
+    {
+      "name": "Polymethyl Methacrylate (PMMA)",
+      "family": "Other",
+      "wvtrValues": [{"value": 10.0, "thickness": 1000}],
+      "otrValues": [{"value": 300, "thickness": 1000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyvinylidene Fluoride (PVDF)",
+      "family": "Other",
+      "wvtrValues": [{"value": 5.0, "thickness": 500}],
+      "otrValues": [{"value": 200, "thickness": 500}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Polyoxymethylene (POM)",
+      "family": "Other",
+      "wvtrValues": [{"value": 10.0, "thickness": 1000}],
+      "otrValues": [{"value": 250, "thickness": 1000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polysulfone",
+      "family": "Other",
+      "wvtrValues": [{"value": 12.0, "thickness": 500}],
+      "otrValues": [{"value": 400, "thickness": 500}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Polyvinyl Alcohol (PVA)",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.2, "thickness": 20}],
+      "otrValues": [{"value": 0.1, "thickness": 20}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "PLA (Polylactic Acid)",
+      "family": "Other",
+      "wvtrValues": [{"value": 5.0, "thickness": 300}],
+      "otrValues": [{"value": 800, "thickness": 300}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "PHA (Polyhydroxyalkanoate)",
+      "family": "Other",
+      "wvtrValues": [{"value": 7.0, "thickness": 400}],
+      "otrValues": [{"value": 600, "thickness": 400}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Modified Starch",
+      "family": "Other",
+      "wvtrValues": [{"value": 200.0, "thickness": 500}],
+      "otrValues": [{"value": 15000, "thickness": 500}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "Regenerated Cellulose",
+      "family": "Paper",
+      "wvtrValues": [{"value": 400.0, "thickness": 300}],
+      "otrValues": [{"value": 30000, "thickness": 300}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Biodegradable Polyester",
+      "family": "Other",
+      "wvtrValues": [{"value": 8.0, "thickness": 600}],
+      "otrValues": [{"value": 700, "thickness": 600}],
+      "validConditions": [{"temperature": 23, "humidity": 50}]
+    },
+    {
+      "name": "PE/Clay Nanocomposite",
+      "family": "PE",
+      "wvtrValues": [{"value": 0.4, "thickness": 200}],
+      "otrValues": [{"value": 2000, "thickness": 200}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "PET/Silica Nanocomposite",
+      "family": "PET",
+      "wvtrValues": [{"value": 0.7, "thickness": 300}],
+      "otrValues": [{"value": 40, "thickness": 300}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "Multilayer PE/EVOH Film",
+      "family": "EVOH",
+      "wvtrValues": [{"value": 0.15, "thickness": 400}],
+      "otrValues": [{"value": 0.3, "thickness": 400}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Ceramic-Coated Polyethylene",
+      "family": "PE",
+      "wvtrValues": [{"value": 0.2, "thickness": 500}],
+      "otrValues": [{"value": 1.5, "thickness": 500}],
+      "validConditions": [{"temperature": 35, "humidity": 80}]
+    },
+    {
+      "name": "Organic Barrier Polypropylene",
+      "family": "PP",
+      "wvtrValues": [{"value": 1.0, "thickness": 300}],
+      "otrValues": [{"value": 1500, "thickness": 300}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Breathable Waterproof Membrane",
+      "family": "PU",
+      "wvtrValues": [{"value": 30.0, "thickness": 800}],
+      "otrValues": [{"value": 3000, "thickness": 800}],
+      "validConditions": [{"temperature": 25, "humidity": 70}]
+    },
+    {
+      "name": "OSB Panel",
+      "family": "Paper",
+      "wvtrValues": [{"value": 120.0, "thickness": 12000}],
+      "otrValues": [{"value": 25000, "thickness": 12000}],
+      "validConditions": [{"temperature": 20, "humidity": 60}]
+    },
+    {
+      "name": "Fiberglass",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.05, "thickness": 2000}],
+      "otrValues": [{"value": 50, "thickness": 2000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Expanded PVC",
+      "family": "PVC",
+      "wvtrValues": [{"value": 4.0, "thickness": 5000}],
+      "otrValues": [{"value": 800, "thickness": 5000}],
+      "validConditions": [{"temperature": 30, "humidity": 50}]
+    },
+    {
+      "name": "Extruded Polystyrene (XPS)",
+      "family": "PS",
+      "wvtrValues": [{"value": 0.3, "thickness": 30000}],
+      "otrValues": [{"value": 3000, "thickness": 30000}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Synthetic Leather",
+      "family": "PU",
+      "wvtrValues": [{"value": 120.0, "thickness": 1500}],
+      "otrValues": [{"value": 5000, "thickness": 1500}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Food Wrap PVC Film",
+      "family": "PVC",
+      "wvtrValues": [{"value": 3.5, "thickness": 15}],
+      "otrValues": [{"value": 2500, "thickness": 15}],
+      "validConditions": [{"temperature": 25, "humidity": 70}]
+    },
+    {
+      "name": "Silicone Gasket",
+      "family": "Other",
+      "wvtrValues": [{"value": 500.0, "thickness": 2000}],
+      "otrValues": [{"value": 20000, "thickness": 2000}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Medical PU Film",
+      "family": "PU",
+      "wvtrValues": [{"value": 1.8, "thickness": 30}],
+      "otrValues": [{"value": 150, "thickness": 30}],
+      "validConditions": [{"temperature": 37, "humidity": 90}]
+    },
+    {
+      "name": "PTFE Technical Fabric",
+      "family": "PTFE",
+      "wvtrValues": [{"value": 950.0, "thickness": 100}],
+      "otrValues": [{"value": 18000, "thickness": 100}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Stainless Steel",
+      "family": "AL",
+      "wvtrValues": [{"value": 0.0, "thickness": 500}],
+      "otrValues": [{"value": 0.0, "thickness": 500}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Thick Aluminum",
+      "family": "AL",
+      "wvtrValues": [{"value": 0.0, "thickness": 100}],
+      "otrValues": [{"value": 0.0, "thickness": 100}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Corrugated Cardboard",
+      "family": "Paper",
+      "wvtrValues": [{"value": 800.0, "thickness": 3000}],
+      "otrValues": [{"value": 60000, "thickness": 3000}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Plywood",
+      "family": "Paper",
+      "wvtrValues": [{"value": 200.0, "thickness": 10000}],
+      "otrValues": [{"value": 18000, "thickness": 10000}],
+      "validConditions": [{"temperature": 20, "humidity": 70}]
+    },
+    {
+      "name": "Porous Ceramic",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.5, "thickness": 5000}],
+      "otrValues": [{"value": 100, "thickness": 5000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Waterproof Polyester Fabric",
+      "family": "PET",
+      "wvtrValues": [{"value": 45.0, "thickness": 600}],
+      "otrValues": [{"value": 4000, "thickness": 600}],
+      "validConditions": [{"temperature": 30, "humidity": 70}]
+    },
+    {
+      "name": "PU-Coated Nylon Fabric",
+      "family": "PA",
+      "wvtrValues": [{"value": 28.0, "thickness": 400}],
+      "otrValues": [{"value": 2500, "thickness": 400}],
+      "validConditions": [{"temperature": 35, "humidity": 60}]
+    },
+    {
+      "name": "Breathable PTFE Fabric",
+      "family": "PTFE",
+      "wvtrValues": [{"value": 900.0, "thickness": 200}],
+      "otrValues": [{"value": 15000, "thickness": 200}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Silica Aerogel",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.02, "thickness": 10000}],
+      "otrValues": [{"value": 0.5, "thickness": 10000}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Graphene/Polymer Film",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.05, "thickness": 1}],
+      "otrValues": [{"value": 0.02, "thickness": 1}],
+      "validConditions": [{"temperature": 30, "humidity": 70}]
+    },
+    {
+      "name": "MOF/Polymer Membrane",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.1, "thickness": 300}],
+      "otrValues": [{"value": 0.3, "thickness": 300}],
+      "validConditions": [{"temperature": 38, "humidity": 80}]
+    },
+    {
+      "name": "Laminated Glass",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.0, "thickness": 5000}],
+      "otrValues": [{"value": 0.0, "thickness": 5000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "PVDC/PE Film",
+      "family": "PVC",
+      "wvtrValues": [{"value": 0.25, "thickness": 150}],
+      "otrValues": [{"value": 5.0, "thickness": 150}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Conductive Polymer",
+      "family": "Other",
+      "wvtrValues": [{"value": 5.0, "thickness": 500}],
+      "otrValues": [{"value": 400, "thickness": 500}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Nanocrystalline Cellulose Film",
+      "family": "Paper",
+      "wvtrValues": [{"value": 0.8, "thickness": 10}],
+      "otrValues": [{"value": 2.0, "thickness": 10}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Zeolite-Based Membrane",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.12, "thickness": 700}],
+      "otrValues": [{"value": 0.8, "thickness": 700}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "Shape Memory Polymer",
+      "family": "Other",
+      "wvtrValues": [{"value": 2.5, "thickness": 400}],
+      "otrValues": [{"value": 300, "thickness": 400}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Thermochromic Polymer Film",
+      "family": "Other",
+      "wvtrValues": [{"value": 3.8, "thickness": 300}],
+      "otrValues": [{"value": 500, "thickness": 300}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Graphene/PET Composite",
+      "family": "PET",
+      "wvtrValues": [{"value": 0.18, "thickness": 250}],
+      "otrValues": [{"value": 15, "thickness": 250}],
+      "validConditions": [{"temperature": 35, "humidity": 80}]
+    },
+    {
+      "name": "Antimicrobial Film",
+      "family": "Other",
+      "wvtrValues": [{"value": 1.0, "thickness": 150}],
+      "otrValues": [{"value": 200, "thickness": 150}],
+      "validConditions": [{"temperature": 30, "humidity": 70}]
+    },
+    {
+      "name": "Piezoelectric Polymer",
+      "family": "Other",
+      "wvtrValues": [{"value": 6.0, "thickness": 500}],
+      "otrValues": [{"value": 600, "thickness": 500}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Nanofiber Film",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.09, "thickness": 50}],
+      "otrValues": [{"value": 1.0, "thickness": 50}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Cellulose Acetate Film",
+      "family": "Paper",
+      "wvtrValues": [{"value": 2.2, "thickness": 120}],
+      "otrValues": [{"value": 400, "thickness": 120}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Polyamide Film",
+      "family": "PA",
+      "wvtrValues": [{"value": 15.0, "thickness": 80}],
+      "otrValues": [{"value": 50, "thickness": 80}],
+      "validConditions": [{"temperature": 30, "humidity": 70}]
+    },
+    {
+      "name": "Ethylene Vinyl Acetate (EVA)",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.6, "thickness": 400}],
+      "otrValues": [{"value": 4000, "thickness": 400}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Polypropylene Nonwoven Fabric",
+      "family": "PP",
+      "wvtrValues": [{"value": 12.0, "thickness": 200}],
+      "otrValues": [{"value": 3500, "thickness": 200}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyethylene Terephthalate Nonwoven",
+      "family": "PET",
+      "wvtrValues": [{"value": 7.0, "thickness": 300}],
+      "otrValues": [{"value": 800, "thickness": 300}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyvinyl Chloride Foam",
+      "family": "PVC",
+      "wvtrValues": [{"value": 2.5, "thickness": 6000}],
+      "otrValues": [{"value": 600, "thickness": 6000}],
+      "validConditions": [{"temperature": 30, "humidity": 50}]
+    },
+    {
+      "name": "Polycarbonate Sheet",
+      "family": "PC",
+      "wvtrValues": [{"value": 0.4, "thickness": 1000}],
+      "otrValues": [{"value": 250, "thickness": 1000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Acrylic Sheet",
+      "family": "Other",
+      "wvtrValues": [{"value": 1.2, "thickness": 2000}],
+      "otrValues": [{"value": 350, "thickness": 2000}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyurethane Foam",
+      "family": "PU",
+      "wvtrValues": [{"value": 10.0, "thickness": 5000}],
+      "otrValues": [{"value": 2000, "thickness": 5000}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyether Foam",
+      "family": "Other",
+      "wvtrValues": [{"value": 8.0, "thickness": 4000}],
+      "otrValues": [{"value": 1800, "thickness": 4000}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyamide Foam",
+      "family": "PA",
+      "wvtrValues": [{"value": 15.0, "thickness": 3000}],
+      "otrValues": [{"value": 2500, "thickness": 3000}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    },
+    {
+      "name": "Polyethylene Foam",
+      "family": "PE",
+      "wvtrValues": [{"value": 5.0, "thickness": 8000}],
+      "otrValues": [{"value": 4500, "thickness": 8000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polypropylene Foam",
+      "family": "PP",
+      "wvtrValues": [{"value": 4.0, "thickness": 10000}],
+      "otrValues": [{"value": 3200, "thickness": 10000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyurethane-Coated Fabric",
+      "family": "PU",
+      "wvtrValues": [{"value": 0.5, "thickness": 200}],
+      "otrValues": [{"value": 80, "thickness": 200}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyester-Coated Paper",
+      "family": "Paper",
+      "wvtrValues": [{"value": 1.8, "thickness": 250}],
+      "otrValues": [{"value": 300, "thickness": 250}],
+      "validConditions": [{"temperature": 25, "humidity": 60}]
+    },
+    {
+      "name": "Expanded Polystyrene (EPS)",
+      "family": "PS",
+      "wvtrValues": [{"value": 0.4, "thickness": 5000}],
+      "otrValues": [{"value": 2800, "thickness": 5000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyethylene Naphthalate (PEN)",
+      "family": "PET",
+      "wvtrValues": [{"value": 0.3, "thickness": 100}],
+      "otrValues": [{"value": 25, "thickness": 100}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyvinyl Butyral (PVB)",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.2, "thickness": 700}],
+      "otrValues": [{"value": 100, "thickness": 700}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polytetrafluoroethylene (PTFE) Sheet",
+      "family": "PTFE",
+      "wvtrValues": [{"value": 1.0, "thickness": 1000}],
+      "otrValues": [{"value": 150, "thickness": 1000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyphenylene Sulfide (PPS)",
+      "family": "Other",
+      "wvtrValues": [{"value": 0.8, "thickness": 500}],
+      "otrValues": [{"value": 120, "thickness": 500}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyether Block Amide (PEBA)",
+      "family": "Other",
+      "wvtrValues": [{"value": 4.0, "thickness": 300}],
+      "otrValues": [{"value": 600, "thickness": 300}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyvinylidene Chloride (PVDC) Coating",
+      "family": "PVC",
+      "wvtrValues": [{"value": 0.1, "thickness": 20}],
+      "otrValues": [{"value": 0.5, "thickness": 20}],
+      "validConditions": [{"temperature": 38, "humidity": 90}]
+    },
+    {
+      "name": "Polyethylene Terephthalate Glycol (PETG)",
+      "family": "PET",
+      "wvtrValues": [{"value": 2.5, "thickness": 800}],
+      "otrValues": [{"value": 80, "thickness": 800}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polypropylene Random Copolymer (PP-R)",
+      "family": "PP",
+      "wvtrValues": [{"value": 0.9, "thickness": 400}],
+      "otrValues": [{"value": 2200, "thickness": 400}],
+      "validConditions": [{"temperature": 30, "humidity": 60}]
+    },
+    {
+      "name": "Polyoxymethylene Copolymer (Co-POM)",
+      "family": "Other",
+      "wvtrValues": [{"value": 1.5, "thickness": 1000}],
+      "otrValues": [{"value": 280, "thickness": 1000}],
+      "validConditions": [{"temperature": 25, "humidity": 50}]
+    },
+    {
+      "name": "Polyamide-Imide (PAI)",
+      "family": "PA",
+      "wvtrValues": [{"value": 0.7, "thickness": 300}],
+      "otrValues": [{"value": 90, "thickness": 300}],
+      "validConditions": [{"temperature": 35, "humidity": 70}]
+    }
+  ]
+}
