@@ -1,829 +1,289 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2024-01-15",
+  "version": "2.0",
+  "lastUpdated": "2024-05-20",
   "materials": [
-    {
-      "name": "PET",
-      "family": "PET",
-      "wvtrValues": [
-        {"value": 1.0, "thickness": 500},
-        {"value": 2.0, "thickness": 500},
-        {"value": 4.0, "thickness": 500}
-      ],
-      "otrValues": [
-        {"value": 150, "thickness": 500},
-        {"value": 200, "thickness": 500},
-        {"value": 350, "thickness": 500}
-      ],
-      "validConditions": [
-        {"temperature": 23, "humidity": 50},
-        {"temperature": 38, "humidity": 50},
-        {"temperature": 50, "humidity": 50}
-      ]
-    },
-    {
-      "name": "Nylon 6 (multi-temp)",
-      "family": "PA",
-      "wvtrValues": [
-        {"value": 10.0, "thickness": 100},
-        {"value": 25.0, "thickness": 100},
-        {"value": 50.0, "thickness": 100}
-      ],
-      "otrValues": [
-        {"value": 30, "thickness": 100},
-        {"value": 60, "thickness": 100},
-        {"value": 120, "thickness": 100}
-      ],
-      "validConditions": [
-        {"temperature": 23, "humidity": 60},
-        {"temperature": 38, "humidity": 60},
-        {"temperature": 50, "humidity": 60}
-      ]
-    },
-    {
-      "name": "LDPE (multi-temp)",
-      "family": "PE",
-      "wvtrValues": [
-        {"value": 0.8, "thickness": 100},
-        {"value": 1.5, "thickness": 100},
-        {"value": 2.8, "thickness": 100}
-      ],
-      "otrValues": [
-        {"value": 800, "thickness": 100},
-        {"value": 1200, "thickness": 100},
-        {"value": 2000, "thickness": 100}
-      ],
-      "validConditions": [
-        {"temperature": 20, "humidity": 50},
-        {"temperature": 30, "humidity": 50},
-        {"temperature": 40, "humidity": 50}
-      ]
-    },
-    {
-      "name": "EVOH (multi-temp)",
-      "family": "EVOH",
-      "wvtrValues": [
-        {"value": 0.05, "thickness": 100},
-        {"value": 0.15, "thickness": 100},
-        {"value": 0.40, "thickness": 100}
-      ],
-      "otrValues": [
-        {"value": 0.5, "thickness": 100},
-        {"value": 1.5, "thickness": 100},
-        {"value": 4.0, "thickness": 100}
-      ],
-      "validConditions": [
-        {"temperature": 23, "humidity": 50},
-        {"temperature": 38, "humidity": 50},
-        {"temperature": 50, "humidity": 50}
-      ]
-    },
-    {
-      "name": "PP (multi-temp)",
-      "family": "PP",
-      "wvtrValues": [
-        {"value": 0.5, "thickness": 50},
-        {"value": 1.0, "thickness": 50},
-        {"value": 2.0, "thickness": 50}
-      ],
-      "otrValues": [
-        {"value": 500, "thickness": 50},
-        {"value": 800, "thickness": 50},
-        {"value": 1500, "thickness": 50}
-      ],
-      "validConditions": [
-        {"temperature": 25, "humidity": 60},
-        {"temperature": 38, "humidity": 60},
-        {"temperature": 50, "humidity": 60}
-      ]
-    },
-    {
-      "name": "Polyurethane",
-      "family": "PU",
-      "wvtrValues": [{"value": 0.3, "thickness": 200}],
-      "otrValues": [{"value": 100, "thickness": 200}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Low-Density Polyethylene (LDPE)",
-      "family": "PE",
-      "wvtrValues": [{"value": 1.2, "thickness": 100}],
-      "otrValues": [{"value": 7500, "thickness": 100}],
-      "validConditions": [{"temperature": 23, "humidity": 50}]
-    },
-    {
-      "name": "Biaxially Oriented Polypropylene (BOPP)",
-      "family": "PP",
-      "wvtrValues": [{"value": 0.8, "thickness": 50}],
-      "otrValues": [{"value": 2000, "thickness": 50}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Rigid PVC",
-      "family": "PVC",
-      "wvtrValues": [{"value": 1.5, "thickness": 500}],
-      "otrValues": [{"value": 130, "thickness": 500}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyester (PET)",
-      "family": "PET",
-      "wvtrValues": [{"value": 3.0, "thickness": 500}],
-      "otrValues": [{"value": 69, "thickness": 500}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Ethylene Vinyl Alcohol (EVOH)",
-      "family": "EVOH",
-      "wvtrValues": [{"value": 0.1, "thickness": 100}],
-      "otrValues": [{"value": 0.15, "thickness": 100}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Aluminum",
-      "family": "AL",
-      "wvtrValues": [{"value": 0.01, "thickness": 20}],
-      "otrValues": [{"value": 0.005, "thickness": 20}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Nylon 6",
-      "family": "PA",
-      "wvtrValues": [{"value": 25.0, "thickness": 100}],
-      "otrValues": [{"value": 35, "thickness": 100}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "High-Density Polyethylene (HDPE)",
-      "family": "PE",
-      "wvtrValues": [{"value": 0.5, "thickness": 1000}],
-      "otrValues": [{"value": 2800, "thickness": 1000}],
-      "validConditions": [{"temperature": 38, "humidity": 50}]
-    },
-    {
-      "name": "PVDC (Saran)",
-      "family": "PVC",
-      "wvtrValues": [{"value": 0.4, "thickness": 50}],
-      "otrValues": [{"value": 6, "thickness": 50}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "PET/EVOH Laminate",
-      "family": "EVOH",
-      "wvtrValues": [{"value": 0.2, "thickness": 400}],
-      "otrValues": [{"value": 0.5, "thickness": 400}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Expanded Polyethylene",
-      "family": "PE",
-      "wvtrValues": [{"value": 15.0, "thickness": 3000}],
-      "otrValues": [{"value": 5000, "thickness": 3000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Butyl Rubber",
-      "family": "Other",
-      "wvtrValues": [{"value": 50.0, "thickness": 1000}],
-      "otrValues": [{"value": 200, "thickness": 1000}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Silicone",
-      "family": "Other",
-      "wvtrValues": [{"value": 1500.0, "thickness": 100}],
-      "otrValues": [{"value": 15000, "thickness": 100}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Tyvek",
-      "family": "Other",
-      "wvtrValues": [{"value": 70.0, "thickness": 500}],
-      "otrValues": [{"value": 8000, "thickness": 500}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Kraft Paper",
-      "family": "Paper",
-      "wvtrValues": [{"value": 500.0, "thickness": 300}],
-      "otrValues": [{"value": 50000, "thickness": 300}],
-      "validConditions": [{"temperature": 23, "humidity": 50}]
-    },
-    {
-      "name": "Waxed Paper",
-      "family": "Paper",
-      "wvtrValues": [{"value": 300.0, "thickness": 200}],
-      "otrValues": [{"value": 20000, "thickness": 200}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "PTFE Fabric",
-      "family": "PTFE",
-      "wvtrValues": [{"value": 1000.0, "thickness": 100}],
-      "otrValues": [{"value": 20000, "thickness": 100}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "GORE-TEX Membrane",
-      "family": "PTFE",
-      "wvtrValues": [{"value": 50.0, "thickness": 500}],
-      "otrValues": [{"value": 5000, "thickness": 500}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Biaxially Oriented Polypropylene Film",
-      "family": "PP",
-      "wvtrValues": [{"value": 5.0, "thickness": 20}],
-      "otrValues": [{"value": 2000, "thickness": 20}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Flexible PVC Film",
-      "family": "PVC",
-      "wvtrValues": [{"value": 2.2, "thickness": 150}],
-      "otrValues": [{"value": 2000, "thickness": 150}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "Polyurethane Film",
-      "family": "PU",
-      "wvtrValues": [{"value": 0.4, "thickness": 150}],
-      "otrValues": [{"value": 120, "thickness": 150}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Crosslinked Polyethylene",
-      "family": "PE",
-      "wvtrValues": [{"value": 1.0, "thickness": 80}],
-      "otrValues": [{"value": 6000, "thickness": 80}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Nylon 6.6",
-      "family": "PA",
-      "wvtrValues": [{"value": 20.0, "thickness": 100}],
-      "otrValues": [{"value": 40, "thickness": 100}],
-      "validConditions": [{"temperature": 38, "humidity": 80}]
-    },
-    {
-      "name": "Metallized Polyester",
-      "family": "PET",
-      "wvtrValues": [{"value": 0.8, "thickness": 200}],
-      "otrValues": [{"value": 1.0, "thickness": 200}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "High-Barrier Polyethylene",
-      "family": "PE",
-      "wvtrValues": [{"value": 0.6, "thickness": 300}],
-      "otrValues": [{"value": 3000, "thickness": 300}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "High-Barrier Polypropylene",
-      "family": "PP",
-      "wvtrValues": [{"value": 0.9, "thickness": 250}],
-      "otrValues": [{"value": 2500, "thickness": 250}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyimide (Kapton)",
-      "family": "Other",
-      "wvtrValues": [{"value": 45.0, "thickness": 100}],
-      "otrValues": [{"value": 500, "thickness": 100}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Polysulfide",
-      "family": "Other",
-      "wvtrValues": [{"value": 1.8, "thickness": 500}],
-      "otrValues": [{"value": 80, "thickness": 500}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyetherimide",
-      "family": "Other",
-      "wvtrValues": [{"value": 40.0, "thickness": 200}],
-      "otrValues": [{"value": 450, "thickness": 200}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Polyether Ether Ketone (PEEK)",
-      "family": "Other",
-      "wvtrValues": [{"value": 3.5, "thickness": 500}],
-      "otrValues": [{"value": 150, "thickness": 500}],
-      "validConditions": [{"temperature": 35, "humidity": 50}]
-    },
-    {
-      "name": "Polymethyl Methacrylate (PMMA)",
-      "family": "Other",
-      "wvtrValues": [{"value": 10.0, "thickness": 1000}],
-      "otrValues": [{"value": 300, "thickness": 1000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyvinylidene Fluoride (PVDF)",
-      "family": "Other",
-      "wvtrValues": [{"value": 5.0, "thickness": 500}],
-      "otrValues": [{"value": 200, "thickness": 500}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Polyoxymethylene (POM)",
-      "family": "Other",
-      "wvtrValues": [{"value": 10.0, "thickness": 1000}],
-      "otrValues": [{"value": 250, "thickness": 1000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polysulfone",
-      "family": "Other",
-      "wvtrValues": [{"value": 12.0, "thickness": 500}],
-      "otrValues": [{"value": 400, "thickness": 500}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Polyvinyl Alcohol (PVA)",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.2, "thickness": 20}],
-      "otrValues": [{"value": 0.1, "thickness": 20}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "PLA (Polylactic Acid)",
-      "family": "Other",
-      "wvtrValues": [{"value": 5.0, "thickness": 300}],
-      "otrValues": [{"value": 800, "thickness": 300}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "PHA (Polyhydroxyalkanoate)",
-      "family": "Other",
-      "wvtrValues": [{"value": 7.0, "thickness": 400}],
-      "otrValues": [{"value": 600, "thickness": 400}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Modified Starch",
-      "family": "Other",
-      "wvtrValues": [{"value": 200.0, "thickness": 500}],
-      "otrValues": [{"value": 15000, "thickness": 500}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "Regenerated Cellulose",
-      "family": "Paper",
-      "wvtrValues": [{"value": 400.0, "thickness": 300}],
-      "otrValues": [{"value": 30000, "thickness": 300}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Biodegradable Polyester",
-      "family": "Other",
-      "wvtrValues": [{"value": 8.0, "thickness": 600}],
-      "otrValues": [{"value": 700, "thickness": 600}],
-      "validConditions": [{"temperature": 23, "humidity": 50}]
-    },
-    {
-      "name": "PE/Clay Nanocomposite",
-      "family": "PE",
-      "wvtrValues": [{"value": 0.4, "thickness": 200}],
-      "otrValues": [{"value": 2000, "thickness": 200}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "PET/Silica Nanocomposite",
-      "family": "PET",
-      "wvtrValues": [{"value": 0.7, "thickness": 300}],
-      "otrValues": [{"value": 40, "thickness": 300}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "Multilayer PE/EVOH Film",
-      "family": "EVOH",
-      "wvtrValues": [{"value": 0.15, "thickness": 400}],
-      "otrValues": [{"value": 0.3, "thickness": 400}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Ceramic-Coated Polyethylene",
-      "family": "PE",
-      "wvtrValues": [{"value": 0.2, "thickness": 500}],
-      "otrValues": [{"value": 1.5, "thickness": 500}],
-      "validConditions": [{"temperature": 35, "humidity": 80}]
-    },
-    {
-      "name": "Organic Barrier Polypropylene",
-      "family": "PP",
-      "wvtrValues": [{"value": 1.0, "thickness": 300}],
-      "otrValues": [{"value": 1500, "thickness": 300}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Breathable Waterproof Membrane",
-      "family": "PU",
-      "wvtrValues": [{"value": 30.0, "thickness": 800}],
-      "otrValues": [{"value": 3000, "thickness": 800}],
-      "validConditions": [{"temperature": 25, "humidity": 70}]
-    },
-    {
-      "name": "OSB Panel",
-      "family": "Paper",
-      "wvtrValues": [{"value": 120.0, "thickness": 12000}],
-      "otrValues": [{"value": 25000, "thickness": 12000}],
-      "validConditions": [{"temperature": 20, "humidity": 60}]
-    },
-    {
-      "name": "Fiberglass",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.05, "thickness": 2000}],
-      "otrValues": [{"value": 50, "thickness": 2000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Expanded PVC",
-      "family": "PVC",
-      "wvtrValues": [{"value": 4.0, "thickness": 5000}],
-      "otrValues": [{"value": 800, "thickness": 5000}],
-      "validConditions": [{"temperature": 30, "humidity": 50}]
-    },
-    {
-      "name": "Extruded Polystyrene (XPS)",
-      "family": "PS",
-      "wvtrValues": [{"value": 0.3, "thickness": 30000}],
-      "otrValues": [{"value": 3000, "thickness": 30000}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Synthetic Leather",
-      "family": "PU",
-      "wvtrValues": [{"value": 120.0, "thickness": 1500}],
-      "otrValues": [{"value": 5000, "thickness": 1500}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Food Wrap PVC Film",
-      "family": "PVC",
-      "wvtrValues": [{"value": 3.5, "thickness": 15}],
-      "otrValues": [{"value": 2500, "thickness": 15}],
-      "validConditions": [{"temperature": 25, "humidity": 70}]
-    },
-    {
-      "name": "Silicone Gasket",
-      "family": "Other",
-      "wvtrValues": [{"value": 500.0, "thickness": 2000}],
-      "otrValues": [{"value": 20000, "thickness": 2000}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Medical PU Film",
-      "family": "PU",
-      "wvtrValues": [{"value": 1.8, "thickness": 30}],
-      "otrValues": [{"value": 150, "thickness": 30}],
-      "validConditions": [{"temperature": 37, "humidity": 90}]
-    },
-    {
-      "name": "PTFE Technical Fabric",
-      "family": "PTFE",
-      "wvtrValues": [{"value": 950.0, "thickness": 100}],
-      "otrValues": [{"value": 18000, "thickness": 100}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Stainless Steel",
-      "family": "AL",
-      "wvtrValues": [{"value": 0.0, "thickness": 500}],
-      "otrValues": [{"value": 0.0, "thickness": 500}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Thick Aluminum",
-      "family": "AL",
-      "wvtrValues": [{"value": 0.0, "thickness": 100}],
-      "otrValues": [{"value": 0.0, "thickness": 100}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Corrugated Cardboard",
-      "family": "Paper",
-      "wvtrValues": [{"value": 800.0, "thickness": 3000}],
-      "otrValues": [{"value": 60000, "thickness": 3000}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Plywood",
-      "family": "Paper",
-      "wvtrValues": [{"value": 200.0, "thickness": 10000}],
-      "otrValues": [{"value": 18000, "thickness": 10000}],
-      "validConditions": [{"temperature": 20, "humidity": 70}]
-    },
-    {
-      "name": "Porous Ceramic",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.5, "thickness": 5000}],
-      "otrValues": [{"value": 100, "thickness": 5000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Waterproof Polyester Fabric",
-      "family": "PET",
-      "wvtrValues": [{"value": 45.0, "thickness": 600}],
-      "otrValues": [{"value": 4000, "thickness": 600}],
-      "validConditions": [{"temperature": 30, "humidity": 70}]
-    },
-    {
-      "name": "PU-Coated Nylon Fabric",
-      "family": "PA",
-      "wvtrValues": [{"value": 28.0, "thickness": 400}],
-      "otrValues": [{"value": 2500, "thickness": 400}],
-      "validConditions": [{"temperature": 35, "humidity": 60}]
-    },
-    {
-      "name": "Breathable PTFE Fabric",
-      "family": "PTFE",
-      "wvtrValues": [{"value": 900.0, "thickness": 200}],
-      "otrValues": [{"value": 15000, "thickness": 200}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Silica Aerogel",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.02, "thickness": 10000}],
-      "otrValues": [{"value": 0.5, "thickness": 10000}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Graphene/Polymer Film",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.05, "thickness": 1}],
-      "otrValues": [{"value": 0.02, "thickness": 1}],
-      "validConditions": [{"temperature": 30, "humidity": 70}]
-    },
-    {
-      "name": "MOF/Polymer Membrane",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.1, "thickness": 300}],
-      "otrValues": [{"value": 0.3, "thickness": 300}],
-      "validConditions": [{"temperature": 38, "humidity": 80}]
-    },
-    {
-      "name": "Laminated Glass",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.0, "thickness": 5000}],
-      "otrValues": [{"value": 0.0, "thickness": 5000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "PVDC/PE Film",
-      "family": "PVC",
-      "wvtrValues": [{"value": 0.25, "thickness": 150}],
-      "otrValues": [{"value": 5.0, "thickness": 150}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Conductive Polymer",
-      "family": "Other",
-      "wvtrValues": [{"value": 5.0, "thickness": 500}],
-      "otrValues": [{"value": 400, "thickness": 500}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Nanocrystalline Cellulose Film",
-      "family": "Paper",
-      "wvtrValues": [{"value": 0.8, "thickness": 10}],
-      "otrValues": [{"value": 2.0, "thickness": 10}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Zeolite-Based Membrane",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.12, "thickness": 700}],
-      "otrValues": [{"value": 0.8, "thickness": 700}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "Shape Memory Polymer",
-      "family": "Other",
-      "wvtrValues": [{"value": 2.5, "thickness": 400}],
-      "otrValues": [{"value": 300, "thickness": 400}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Thermochromic Polymer Film",
-      "family": "Other",
-      "wvtrValues": [{"value": 3.8, "thickness": 300}],
-      "otrValues": [{"value": 500, "thickness": 300}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Graphene/PET Composite",
-      "family": "PET",
-      "wvtrValues": [{"value": 0.18, "thickness": 250}],
-      "otrValues": [{"value": 15, "thickness": 250}],
-      "validConditions": [{"temperature": 35, "humidity": 80}]
-    },
-    {
-      "name": "Antimicrobial Film",
-      "family": "Other",
-      "wvtrValues": [{"value": 1.0, "thickness": 150}],
-      "otrValues": [{"value": 200, "thickness": 150}],
-      "validConditions": [{"temperature": 30, "humidity": 70}]
-    },
-    {
-      "name": "Piezoelectric Polymer",
-      "family": "Other",
-      "wvtrValues": [{"value": 6.0, "thickness": 500}],
-      "otrValues": [{"value": 600, "thickness": 500}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Nanofiber Film",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.09, "thickness": 50}],
-      "otrValues": [{"value": 1.0, "thickness": 50}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Cellulose Acetate Film",
-      "family": "Paper",
-      "wvtrValues": [{"value": 2.2, "thickness": 120}],
-      "otrValues": [{"value": 400, "thickness": 120}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Polyamide Film",
-      "family": "PA",
-      "wvtrValues": [{"value": 15.0, "thickness": 80}],
-      "otrValues": [{"value": 50, "thickness": 80}],
-      "validConditions": [{"temperature": 30, "humidity": 70}]
-    },
-    {
-      "name": "Ethylene Vinyl Acetate (EVA)",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.6, "thickness": 400}],
-      "otrValues": [{"value": 4000, "thickness": 400}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Polypropylene Nonwoven Fabric",
-      "family": "PP",
-      "wvtrValues": [{"value": 12.0, "thickness": 200}],
-      "otrValues": [{"value": 3500, "thickness": 200}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyethylene Terephthalate Nonwoven",
-      "family": "PET",
-      "wvtrValues": [{"value": 7.0, "thickness": 300}],
-      "otrValues": [{"value": 800, "thickness": 300}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyvinyl Chloride Foam",
-      "family": "PVC",
-      "wvtrValues": [{"value": 2.5, "thickness": 6000}],
-      "otrValues": [{"value": 600, "thickness": 6000}],
-      "validConditions": [{"temperature": 30, "humidity": 50}]
-    },
-    {
-      "name": "Polycarbonate Sheet",
-      "family": "PC",
-      "wvtrValues": [{"value": 0.4, "thickness": 1000}],
-      "otrValues": [{"value": 250, "thickness": 1000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Acrylic Sheet",
-      "family": "Other",
-      "wvtrValues": [{"value": 1.2, "thickness": 2000}],
-      "otrValues": [{"value": 350, "thickness": 2000}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyurethane Foam",
-      "family": "PU",
-      "wvtrValues": [{"value": 10.0, "thickness": 5000}],
-      "otrValues": [{"value": 2000, "thickness": 5000}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyether Foam",
-      "family": "Other",
-      "wvtrValues": [{"value": 8.0, "thickness": 4000}],
-      "otrValues": [{"value": 1800, "thickness": 4000}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyamide Foam",
-      "family": "PA",
-      "wvtrValues": [{"value": 15.0, "thickness": 3000}],
-      "otrValues": [{"value": 2500, "thickness": 3000}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    },
-    {
-      "name": "Polyethylene Foam",
-      "family": "PE",
-      "wvtrValues": [{"value": 5.0, "thickness": 8000}],
-      "otrValues": [{"value": 4500, "thickness": 8000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polypropylene Foam",
-      "family": "PP",
-      "wvtrValues": [{"value": 4.0, "thickness": 10000}],
-      "otrValues": [{"value": 3200, "thickness": 10000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyurethane-Coated Fabric",
-      "family": "PU",
-      "wvtrValues": [{"value": 0.5, "thickness": 200}],
-      "otrValues": [{"value": 80, "thickness": 200}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyester-Coated Paper",
-      "family": "Paper",
-      "wvtrValues": [{"value": 1.8, "thickness": 250}],
-      "otrValues": [{"value": 300, "thickness": 250}],
-      "validConditions": [{"temperature": 25, "humidity": 60}]
-    },
-    {
-      "name": "Expanded Polystyrene (EPS)",
-      "family": "PS",
-      "wvtrValues": [{"value": 0.4, "thickness": 5000}],
-      "otrValues": [{"value": 2800, "thickness": 5000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyethylene Naphthalate (PEN)",
-      "family": "PET",
-      "wvtrValues": [{"value": 0.3, "thickness": 100}],
-      "otrValues": [{"value": 25, "thickness": 100}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyvinyl Butyral (PVB)",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.2, "thickness": 700}],
-      "otrValues": [{"value": 100, "thickness": 700}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polytetrafluoroethylene (PTFE) Sheet",
-      "family": "PTFE",
-      "wvtrValues": [{"value": 1.0, "thickness": 1000}],
-      "otrValues": [{"value": 150, "thickness": 1000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyphenylene Sulfide (PPS)",
-      "family": "Other",
-      "wvtrValues": [{"value": 0.8, "thickness": 500}],
-      "otrValues": [{"value": 120, "thickness": 500}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyether Block Amide (PEBA)",
-      "family": "Other",
-      "wvtrValues": [{"value": 4.0, "thickness": 300}],
-      "otrValues": [{"value": 600, "thickness": 300}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyvinylidene Chloride (PVDC) Coating",
-      "family": "PVC",
-      "wvtrValues": [{"value": 0.1, "thickness": 20}],
-      "otrValues": [{"value": 0.5, "thickness": 20}],
-      "validConditions": [{"temperature": 38, "humidity": 90}]
-    },
-    {
-      "name": "Polyethylene Terephthalate Glycol (PETG)",
-      "family": "PET",
-      "wvtrValues": [{"value": 2.5, "thickness": 800}],
-      "otrValues": [{"value": 80, "thickness": 800}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polypropylene Random Copolymer (PP-R)",
-      "family": "PP",
-      "wvtrValues": [{"value": 0.9, "thickness": 400}],
-      "otrValues": [{"value": 2200, "thickness": 400}],
-      "validConditions": [{"temperature": 30, "humidity": 60}]
-    },
-    {
-      "name": "Polyoxymethylene Copolymer (Co-POM)",
-      "family": "Other",
-      "wvtrValues": [{"value": 1.5, "thickness": 1000}],
-      "otrValues": [{"value": 280, "thickness": 1000}],
-      "validConditions": [{"temperature": 25, "humidity": 50}]
-    },
-    {
-      "name": "Polyamide-Imide (PAI)",
-      "family": "PA",
-      "wvtrValues": [{"value": 0.7, "thickness": 300}],
-      "otrValues": [{"value": 90, "thickness": 300}],
-      "validConditions": [{"temperature": 35, "humidity": 70}]
-    }
+    {"name":"EVAL F101B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":3.1,"thickness":100},{"value":7.8,"thickness":100}],"otrValues":[{"value":0.40,"thickness":20},{"value":1.2,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.038,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.055,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL F171B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":3.1,"thickness":100},{"value":7.8,"thickness":100}],"otrValues":[{"value":0.40,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.038,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.055,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL H171B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":4.5,"thickness":100},{"value":11.0,"thickness":100}],"otrValues":[{"value":0.70,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.030,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.040,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL E105B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":2.0,"thickness":100}],"otrValues":[{"value":1.50,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.022,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.028,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL T101B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":3.1,"thickness":100}],"otrValues":[{"value":0.50,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.038,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.055,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL L101B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":100}],"otrValues":[{"value":0.18,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.045,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.065,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL G156B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":6.0,"thickness":100}],"otrValues":[{"value":0.09,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.050,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.070,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL C109B","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":100}],"otrValues":[{"value":0.30,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.035,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.048,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"Soarnol ET3803RB","family":"EVOH","company":"Nippon Gohsei","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":100}],"otrValues":[{"value":0.40,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.038,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.nippon-gohsei.com/soarnol/"},
+    {"name":"Soarnol DC3203RB","family":"EVOH","company":"Nippon Gohsei","isMetallized":false,"wvtrValues":[{"value":3.0,"thickness":100}],"otrValues":[{"value":0.35,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.040,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.nippon-gohsei.com/soarnol/"},
+    {"name":"Soarnol A4412","family":"EVOH","company":"Nippon Gohsei","isMetallized":false,"wvtrValues":[{"value":2.2,"thickness":100}],"otrValues":[{"value":1.80,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.020,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.nippon-gohsei.com/soarnol/"},
+    {"name":"Bicor 30MA720","family":"PP","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":30}],"otrValues":[{"value":2480,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.exxonmobilchemical.com"},
+    {"name":"Bicor 50MA750","family":"PP","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":3.0,"thickness":50}],"otrValues":[{"value":1550,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.exxonmobilchemical.com"},
+    {"name":"Bicor 30MB400","family":"PP","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":4.7,"thickness":30}],"otrValues":[{"value":2400,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Treofan BOPP NNO 20","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":7.5,"thickness":20}],"otrValues":[{"value":3900,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.treofan.com"},
+    {"name":"Treofan BOPP NNO 30","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":30}],"otrValues":[{"value":2600,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.treofan.com"},
+    {"name":"Taghleef BO-PP 30AY","family":"PP","company":"Taghleef Industries","isMetallized":false,"wvtrValues":[{"value":5.2,"thickness":30}],"otrValues":[{"value":2500,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ti-films.com"},
+    {"name":"Cosmo BOPP CPP 30","family":"PP","company":"Cosmo Films","isMetallized":false,"wvtrValues":[{"value":5.5,"thickness":30}],"otrValues":[{"value":2600,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cosmofilms.com"},
+    {"name":"Jindal BOPP JY-20","family":"PP","company":"Jindal Films","isMetallized":false,"wvtrValues":[{"value":7.8,"thickness":20}],"otrValues":[{"value":3800,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.jindalfilms.com"},
+    {"name":"Bicor MET-HB 30","family":"PP","company":"ExxonMobil","isMetallized":true,"wvtrValues":[{"value":0.10,"thickness":30}],"otrValues":[{"value":15.5,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Jindal MetBOPP 20","family":"PP","company":"Jindal Films","isMetallized":true,"wvtrValues":[{"value":0.12,"thickness":20}],"otrValues":[{"value":18,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.jindalfilms.com"},
+    {"name":"Taghleef MetBOPP TR30","family":"PP","company":"Taghleef Industries","isMetallized":true,"wvtrValues":[{"value":0.08,"thickness":30}],"otrValues":[{"value":12,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ti-films.com"},
+    {"name":"Cosmo MetBOPP MH25","family":"PP","company":"Cosmo Films","isMetallized":true,"wvtrValues":[{"value":0.09,"thickness":25}],"otrValues":[{"value":14,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Lumirror S10 12","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":17.0,"thickness":12}],"otrValues":[{"value":100,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com/plastics/lumirror/"},
+    {"name":"Lumirror S10 23","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":9.0,"thickness":23}],"otrValues":[{"value":52,"thickness":23}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com/plastics/lumirror/"},
+    {"name":"Lumirror T60 12","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":17.5,"thickness":12}],"otrValues":[{"value":103,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com/plastics/lumirror/"},
+    {"name":"Hostaphan RN 36","family":"PET","company":"Mitsubishi Chemical","isMetallized":false,"wvtrValues":[{"value":4.7,"thickness":36}],"otrValues":[{"value":28,"thickness":36}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mcfp.de"},
+    {"name":"Hostaphan RN 12","family":"PET","company":"Mitsubishi Chemical","isMetallized":false,"wvtrValues":[{"value":16.0,"thickness":12}],"otrValues":[{"value":95,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mcfp.de"},
+    {"name":"SKC SH71 12","family":"PET","company":"SKC","isMetallized":false,"wvtrValues":[{"value":17.0,"thickness":12}],"otrValues":[{"value":100,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.skc.co.kr"},
+    {"name":"SKC SH71 23","family":"PET","company":"SKC","isMetallized":false,"wvtrValues":[{"value":8.8,"thickness":23}],"otrValues":[{"value":52,"thickness":23}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.skc.co.kr"},
+    {"name":"Mylar A 12","family":"PET","company":"DuPont Teijin Films","isMetallized":false,"wvtrValues":[{"value":17.0,"thickness":12}],"otrValues":[{"value":100,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://usa.dupontteijinfilms.com"},
+    {"name":"Mylar A 23","family":"PET","company":"DuPont Teijin Films","isMetallized":false,"wvtrValues":[{"value":8.5,"thickness":23}],"otrValues":[{"value":50,"thickness":23}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://usa.dupontteijinfilms.com"},
+    {"name":"Melinex 301H 12","family":"PET","company":"DuPont Teijin Films","isMetallized":false,"wvtrValues":[{"value":17.0,"thickness":12}],"otrValues":[{"value":98,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Toray Lumirror VM-PET 12","family":"PET","company":"Toray","isMetallized":true,"wvtrValues":[{"value":0.50,"thickness":12}],"otrValues":[{"value":0.80,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"Hostaphan RNK Met 12","family":"PET","company":"Mitsubishi Chemical","isMetallized":true,"wvtrValues":[{"value":0.40,"thickness":12}],"otrValues":[{"value":0.60,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"SKC MetPET 12","family":"PET","company":"SKC","isMetallized":true,"wvtrValues":[{"value":0.45,"thickness":12}],"otrValues":[{"value":0.70,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.skc.co.kr"},
+    {"name":"Emblem BOPA 15N","family":"PA","company":"Unitika","isMetallized":false,"wvtrValues":[{"value":150,"thickness":15}],"otrValues":[{"value":25,"thickness":15}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.060,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.unitika.co.jp"},
+    {"name":"Emblem BOPA 25N","family":"PA","company":"Unitika","isMetallized":false,"wvtrValues":[{"value":90,"thickness":25}],"otrValues":[{"value":15,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.060,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.unitika.co.jp"},
+    {"name":"Capran Emblem 1200 15","family":"PA","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":145,"thickness":15}],"otrValues":[{"value":26,"thickness":15}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell-packaging.com"},
+    {"name":"Capran Emblem 1200 25","family":"PA","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":87,"thickness":25}],"otrValues":[{"value":16,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell-packaging.com"},
+    {"name":"Domo Sniamid PA6 25","family":"PA","company":"Domo Chemicals","isMetallized":false,"wvtrValues":[{"value":90,"thickness":25}],"otrValues":[{"value":15,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Honeywell Capran Opal 1100 50","family":"PA","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":200,"thickness":50}],"otrValues":[{"value":40,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.020,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Dowlex 2045G LLDPE 50","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":14,"thickness":50}],"otrValues":[{"value":4000,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Dowlex 2045G LLDPE 100","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":7.0,"thickness":100}],"otrValues":[{"value":2000,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Dow LDPE 150E 50","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":20,"thickness":50}],"otrValues":[{"value":8500,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Dow LDPE 150E 100","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":10,"thickness":100}],"otrValues":[{"value":4250,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Ineos HDPE 5502 50","family":"PE","company":"Ineos","isMetallized":false,"wvtrValues":[{"value":5.5,"thickness":50}],"otrValues":[{"value":2100,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ineos.com"},
+    {"name":"Ineos HDPE 5502 100","family":"PE","company":"Ineos","isMetallized":false,"wvtrValues":[{"value":2.8,"thickness":100}],"otrValues":[{"value":1050,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ineos.com"},
+    {"name":"LyondellBasell LDPE 2215 50","family":"PE","company":"LyondellBasell","isMetallized":false,"wvtrValues":[{"value":19,"thickness":50}],"otrValues":[{"value":8000,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.lyondellbasell.com"},
+    {"name":"LyondellBasell mLLDPE 4009 60","family":"PE","company":"LyondellBasell","isMetallized":false,"wvtrValues":[{"value":12,"thickness":60}],"otrValues":[{"value":3600,"thickness":60}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Treofan CPP 40 A","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":6.5,"thickness":40}],"otrValues":[{"value":1600,"thickness":40}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.treofan.com"},
+    {"name":"Treofan CPP 60 A","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":4.3,"thickness":60}],"otrValues":[{"value":1067,"thickness":60}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.treofan.com"},
+    {"name":"Taghleef CPP HS40","family":"PP","company":"Taghleef Industries","isMetallized":false,"wvtrValues":[{"value":6.0,"thickness":40}],"otrValues":[{"value":1500,"thickness":40}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ti-films.com"},
+    {"name":"Cosmo CPP NA50","family":"PP","company":"Cosmo Films","isMetallized":false,"wvtrValues":[{"value":5.2,"thickness":50}],"otrValues":[{"value":1300,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Solvay Ixan SGA1 PVdC coat PET 12","family":"PVC","company":"Solvay","isMetallized":false,"wvtrValues":[{"value":3.0,"thickness":12}],"otrValues":[{"value":5.0,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.solvay.com"},
+    {"name":"Dow Saran Wrap PVDC 25","family":"PVC","company":"Dow","isMetallized":false,"wvtrValues":[{"value":8.0,"thickness":25}],"otrValues":[{"value":4.5,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"ExxonMobil ASB-X PVDC/BOPP 30","family":"PVC","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":30}],"otrValues":[{"value":70,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"ExxonMobil AXT PVDC/BOPP 30","family":"PVC","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":2.5,"thickness":30}],"otrValues":[{"value":6.2,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Novelis Aluminium Foil 9µm","family":"AL","company":"Novelis","isMetallized":false,"wvtrValues":[{"value":0.001,"thickness":9}],"otrValues":[{"value":0.001,"thickness":9}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.novelis.com"},
+    {"name":"Novelis Aluminium Foil 12µm","family":"AL","company":"Novelis","isMetallized":false,"wvtrValues":[{"value":0.0005,"thickness":12}],"otrValues":[{"value":0.0005,"thickness":12}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.novelis.com"},
+    {"name":"Hydro Aluminium Foil 6.35µm","family":"AL","company":"Hydro","isMetallized":false,"wvtrValues":[{"value":0.003,"thickness":6}],"otrValues":[{"value":0.003,"thickness":6}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.hydro.com"},
+    {"name":"Constantia Foil 7µm","family":"AL","company":"Constantia Flexibles","isMetallized":false,"wvtrValues":[{"value":0.002,"thickness":7}],"otrValues":[{"value":0.002,"thickness":7}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cflex.com"},
+    {"name":"Amcor Ultra SIOX PET 12","family":"PET","company":"Amcor","isMetallized":true,"wvtrValues":[{"value":0.05,"thickness":12}],"otrValues":[{"value":0.05,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Toppan GL-AEH PET 12","family":"PET","company":"Toppan","isMetallized":true,"wvtrValues":[{"value":0.08,"thickness":12}],"otrValues":[{"value":0.03,"thickness":12}],"validConditions":[{"temperature":40,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toppan.com"},
+    {"name":"Toppan GL-AE PET 12","family":"PET","company":"Toppan","isMetallized":true,"wvtrValues":[{"value":0.10,"thickness":12}],"otrValues":[{"value":0.05,"thickness":12}],"validConditions":[{"temperature":40,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toppan.com"},
+    {"name":"Mitsubishi DIAPAK C PET 12","family":"PET","company":"Mitsubishi Chemical","isMetallized":true,"wvtrValues":[{"value":0.07,"thickness":12}],"otrValues":[{"value":0.04,"thickness":12}],"validConditions":[{"temperature":40,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mcfp.de"},
+    {"name":"Treofan BOPP SiOx Barrier 25","family":"PP","company":"Treofan","isMetallized":true,"wvtrValues":[{"value":0.20,"thickness":25}],"otrValues":[{"value":10,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.treofan.com"},
+    {"name":"Mitsubishi MXD6 S6007 25","family":"PA","company":"Mitsubishi Gas Chemical","isMetallized":false,"wvtrValues":[{"value":60,"thickness":25}],"otrValues":[{"value":0.5,"thickness":25}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaOTR":0.050,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mgc.co.jp"},
+    {"name":"Mitsubishi MXD6 S6007 50","family":"PA","company":"Mitsubishi Gas Chemical","isMetallized":false,"wvtrValues":[{"value":30,"thickness":50}],"otrValues":[{"value":0.25,"thickness":50}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaOTR":0.050,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mgc.co.jp"},
+    {"name":"DuPont Zytel PA66 film 50","family":"PA","company":"DuPont","isMetallized":false,"wvtrValues":[{"value":300,"thickness":50}],"otrValues":[{"value":30,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.020,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Ingeo 4032D PLA 30","family":"Other","company":"NatureWorks","isMetallized":false,"wvtrValues":[{"value":170,"thickness":30}],"otrValues":[{"value":550,"thickness":30}],"validConditions":[{"temperature":25,"humidity":0}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.natureworksllc.com"},
+    {"name":"Ingeo 4043D PLA 50","family":"Other","company":"NatureWorks","isMetallized":false,"wvtrValues":[{"value":100,"thickness":50}],"otrValues":[{"value":325,"thickness":50}],"validConditions":[{"temperature":25,"humidity":0}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.natureworksllc.com"},
+    {"name":"Ingeo 2003D PLA cast 100","family":"Other","company":"NatureWorks","isMetallized":false,"wvtrValues":[{"value":85,"thickness":100}],"otrValues":[{"value":275,"thickness":100}],"validConditions":[{"temperature":25,"humidity":0}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.natureworksllc.com"},
+    {"name":"TotalEnergies BOPLA 30","family":"Other","company":"TotalEnergies","isMetallized":false,"wvtrValues":[{"value":120,"thickness":30}],"otrValues":[{"value":350,"thickness":30}],"validConditions":[{"temperature":25,"humidity":0}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"GPPS Film 50µm Generic","family":"PS","company":"Generic","isMetallized":false,"wvtrValues":[{"value":140,"thickness":50}],"otrValues":[{"value":2300,"thickness":50}],"validConditions":[{"temperature":25,"humidity":85}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"HIPS Sheet 250µm Generic","family":"PS","company":"Generic","isMetallized":false,"wvtrValues":[{"value":28,"thickness":250}],"otrValues":[{"value":460,"thickness":250}],"validConditions":[{"temperature":25,"humidity":85}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Covestro Makrofol DE 1-1 125","family":"PC","company":"Covestro","isMetallized":false,"wvtrValues":[{"value":12,"thickness":125}],"otrValues":[{"value":145,"thickness":125}],"validConditions":[{"temperature":23,"humidity":85}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.covestro.com"},
+    {"name":"NatureFlex NVS 23","family":"Other","company":"Innovia Films","isMetallized":false,"wvtrValues":[{"value":80,"thickness":23}],"otrValues":[{"value":10,"thickness":23}],"validConditions":[{"temperature":23,"humidity":85}],"hygroscopicBetaWVTR":0.060,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.innoviafilms.com"},
+    {"name":"NatureFlex NK 30","family":"Other","company":"Innovia Films","isMetallized":false,"wvtrValues":[{"value":110,"thickness":30}],"otrValues":[{"value":15,"thickness":30}],"validConditions":[{"temperature":23,"humidity":85}],"hygroscopicBetaWVTR":0.055,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.innoviafilms.com"},
+    {"name":"DuPont Surlyn 1652 50","family":"PE","company":"DuPont","isMetallized":false,"wvtrValues":[{"value":22,"thickness":50}],"otrValues":[{"value":5200,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dupont.com/surlyn"},
+    {"name":"Total Lumicene mPP Cast 50","family":"PP","company":"TotalEnergies","isMetallized":false,"wvtrValues":[{"value":6.0,"thickness":50}],"otrValues":[{"value":1800,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Borealis BH381MO PP 50","family":"PP","company":"Borealis","isMetallized":false,"wvtrValues":[{"value":5.8,"thickness":50}],"otrValues":[{"value":1700,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.borealisgroup.com"},
+    {"name":"Eastman Spectar PETG 250","family":"PET","company":"Eastman Chemical","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":250}],"otrValues":[{"value":12,"thickness":250}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.eastman.com"},
+    {"name":"Eastman Eastar 6763 PETG 500","family":"PET","company":"Eastman Chemical","isMetallized":false,"wvtrValues":[{"value":1.75,"thickness":500}],"otrValues":[{"value":6,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.eastman.com"},
+    {"name":"DSM Akulon K122 PA6 50","family":"PA","company":"DSM","isMetallized":false,"wvtrValues":[{"value":280,"thickness":50}],"otrValues":[{"value":25,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.022,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.058,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dsm.com"},
+    {"name":"DSM Akulon K122 PA6 100","family":"PA","company":"DSM","isMetallized":false,"wvtrValues":[{"value":140,"thickness":100}],"otrValues":[{"value":12.5,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.022,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.058,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dsm.com"},
+    {"name":"Lanxess Durethan B30S PA6 100","family":"PA","company":"Lanxess","isMetallized":false,"wvtrValues":[{"value":130,"thickness":100}],"otrValues":[{"value":12,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.020,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"ExxonMobil AOH PVOH/BOPP 30","family":"Other","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":4.5,"thickness":30}],"otrValues":[{"value":4.7,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaOTR":0.070,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Kuraray Poval PVOH coat PET 12","family":"Other","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":16,"thickness":12}],"otrValues":[{"value":0.8,"thickness":12}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaOTR":0.080,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kuraray.com"},
+    {"name":"Amcor SupraShield PET/EVOH 12","family":"PET","company":"Amcor","isMetallized":false,"wvtrValues":[{"value":4.5,"thickness":12}],"otrValues":[{"value":0.20,"thickness":12}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.030,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Sappi Parade 90 g/m² coated paper","family":"Paper","company":"Sappi","isMetallized":false,"wvtrValues":[{"value":800,"thickness":90}],"otrValues":[{"value":15000,"thickness":90}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sappi.com"},
+    {"name":"Mondi Advantage Plus SB 70g kraftliner","family":"Paper","company":"Mondi","isMetallized":false,"wvtrValues":[{"value":600,"thickness":100}],"otrValues":[{"value":12000,"thickness":100}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mondigroup.com"},
+    {"name":"Smurfit Kappa Kraftliner 125g coated","family":"Paper","company":"Smurfit Kappa","isMetallized":false,"wvtrValues":[{"value":450,"thickness":150}],"otrValues":[{"value":9000,"thickness":150}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.smurfitkappa.com"},
+    {"name":"Sappi BarrierPro 60g grease barrier","family":"Paper","company":"Sappi","isMetallized":false,"wvtrValues":[{"value":150,"thickness":70}],"otrValues":[{"value":800,"thickness":70}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sappi.com"},
+    {"name":"Mondi Advantage SBS 300g/m²","family":"Paper","company":"Mondi","isMetallized":false,"wvtrValues":[{"value":120,"thickness":350}],"otrValues":[{"value":1200,"thickness":350}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Taghleef BOPP Acrylic Coat 30","family":"PP","company":"Taghleef Industries","isMetallized":false,"wvtrValues":[{"value":4.8,"thickness":30}],"otrValues":[{"value":2400,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.ti-films.com"},
+    {"name":"Jindal BOPP HHM 15","family":"PP","company":"Jindal Films","isMetallized":false,"wvtrValues":[{"value":11.0,"thickness":15}],"otrValues":[{"value":5200,"thickness":15}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.jindalfilms.com"},
+    {"name":"Jindal BOPP PW 25","family":"PP","company":"Jindal Films","isMetallized":false,"wvtrValues":[{"value":6.5,"thickness":25}],"otrValues":[{"value":3200,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.jindalfilms.com"},
+    {"name":"Cosmo BOPP FH 20","family":"PP","company":"Cosmo Films","isMetallized":false,"wvtrValues":[{"value":8.0,"thickness":20}],"otrValues":[{"value":4000,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cosmofilms.com"},
+    {"name":"Cosmo BOPP SCB 30","family":"PP","company":"Cosmo Films","isMetallized":false,"wvtrValues":[{"value":5.5,"thickness":30}],"otrValues":[{"value":2700,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cosmofilms.com"},
+    {"name":"Lumirror P60 25","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":6.8,"thickness":25}],"otrValues":[{"value":40,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"Lumirror X10S 50","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":3.4,"thickness":50}],"otrValues":[{"value":20,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"BASF Styropor EPS 20mm slab","family":"PS","company":"BASF","isMetallized":false,"wvtrValues":[{"value":100,"thickness":20000}],"otrValues":[{"value":1000,"thickness":20000}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.basf.com"},
+    {"name":"Klöckner Pentaplast Kpet PETG Tray 500","family":"PET","company":"Klöckner Pentaplast","isMetallized":false,"wvtrValues":[{"value":1.8,"thickness":500}],"otrValues":[{"value":6.5,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kpfilms.com"},
+    {"name":"Soarnol WD2403B","family":"EVOH","company":"Nippon Gohsei","isMetallized":false,"wvtrValues":[{"value":4.0,"thickness":100}],"otrValues":[{"value":0.50,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.040,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Soarnol DT2903B","family":"EVOH","company":"Nippon Gohsei","isMetallized":false,"wvtrValues":[{"value":2.8,"thickness":100}],"otrValues":[{"value":0.30,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaWVTR":0.042,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"BASF Ecoflex F Blend 50","family":"Other","company":"BASF","isMetallized":false,"wvtrValues":[{"value":400,"thickness":50}],"otrValues":[{"value":1800,"thickness":50}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.basf.com/ecoflex"},
+    {"name":"Novamont Mater-Bi NF803T film 30","family":"Other","company":"Novamont","isMetallized":false,"wvtrValues":[{"value":350,"thickness":30}],"otrValues":[{"value":1200,"thickness":30}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.novamont.com"},
+    {"name":"Kaneka PHBH film 30","family":"Other","company":"Kaneka","isMetallized":false,"wvtrValues":[{"value":55,"thickness":30}],"otrValues":[{"value":190,"thickness":30}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kaneka.co.jp"},
+    {"name":"Sealed Air Cryovac OS200 PA/PE 70","family":"PA","company":"Sealed Air","isMetallized":false,"wvtrValues":[{"value":100,"thickness":70}],"otrValues":[{"value":30,"thickness":70}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaOTR":0.045,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sealedair.com"},
+    {"name":"Sealed Air Cryovac BDF Barrier Film 80","family":"PA","company":"Sealed Air","isMetallized":false,"wvtrValues":[{"value":90,"thickness":80}],"otrValues":[{"value":20,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sealedair.com"},
+    {"name":"Amcor Flexibles PA/PE 80 flex pack","family":"PA","company":"Amcor","isMetallized":false,"wvtrValues":[{"value":95,"thickness":80}],"otrValues":[{"value":22,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Berry Global PE/EVOH/PE 5L 100","family":"EVOH","company":"Berry Global","isMetallized":false,"wvtrValues":[{"value":12,"thickness":100}],"otrValues":[{"value":0.80,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaOTR":0.040,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.berryglobal.com"},
+    {"name":"Sealed Air Cryovac EVOH Barrier Bag 120","family":"EVOH","company":"Sealed Air","isMetallized":false,"wvtrValues":[{"value":9,"thickness":120}],"otrValues":[{"value":0.60,"thickness":120}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sealedair.com"},
+    {"name":"Toray Lumirror XD12 PVDC 12","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":1.5,"thickness":12}],"otrValues":[{"value":3.0,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"Honeywell Aclar 22A 51µm","family":"Other","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":0.18,"thickness":51}],"otrValues":[{"value":7.8,"thickness":51}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell-aclar.com"},
+    {"name":"Honeywell Aclar 33C 76µm","family":"Other","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":0.12,"thickness":76}],"otrValues":[{"value":5.2,"thickness":76}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell-aclar.com"},
+    {"name":"Honeywell Aclar Ultra RX 102µm","family":"Other","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":0.08,"thickness":102}],"otrValues":[{"value":3.5,"thickness":102}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell-aclar.com"},
+    {"name":"Topas COC 8007 film 100","family":"Other","company":"Topas Advanced Polymers","isMetallized":false,"wvtrValues":[{"value":0.8,"thickness":100}],"otrValues":[{"value":250,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.topas.com"},
+    {"name":"Zeon Zeonor 1020R COP 100","family":"Other","company":"Zeon","isMetallized":false,"wvtrValues":[{"value":0.7,"thickness":100}],"otrValues":[{"value":220,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.zeon.co.jp"},
+    {"name":"Dow ELITE 5960G mLLDPE 50","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":15,"thickness":50}],"otrValues":[{"value":3800,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Sabic LDPE 2100TN20 50","family":"PE","company":"SABIC","isMetallized":false,"wvtrValues":[{"value":19,"thickness":50}],"otrValues":[{"value":8200,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sabic.com"},
+    {"name":"Borealis FT5230 LDPE 100","family":"PE","company":"Borealis","isMetallized":false,"wvtrValues":[{"value":9.5,"thickness":100}],"otrValues":[{"value":4100,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.borealisgroup.com"},
+    {"name":"Klöckner Pentaplast Pentaform PVC 250","family":"PVC","company":"Klöckner Pentaplast","isMetallized":false,"wvtrValues":[{"value":12,"thickness":250}],"otrValues":[{"value":90,"thickness":250}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kpfilms.com"},
+    {"name":"Klöckner Pentaplast Pentaform PVC 200","family":"PVC","company":"Klöckner Pentaplast","isMetallized":false,"wvtrValues":[{"value":15,"thickness":200}],"otrValues":[{"value":113,"thickness":200}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kpfilms.com"},
+    {"name":"Sealed Air Cryovac PET/PE Lidding 80","family":"PET","company":"Sealed Air","isMetallized":false,"wvtrValues":[{"value":4.0,"thickness":80}],"otrValues":[{"value":25,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Hyosung BOPA 15N","family":"PA","company":"Hyosung","isMetallized":false,"wvtrValues":[{"value":148,"thickness":15}],"otrValues":[{"value":26,"thickness":15}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Hyosung BOPA 25N","family":"PA","company":"Hyosung","isMetallized":false,"wvtrValues":[{"value":90,"thickness":25}],"otrValues":[{"value":15,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Evonik Plexiglas PMMA Sheet 3000µm","family":"Other","company":"Evonik","isMetallized":false,"wvtrValues":[{"value":4.5,"thickness":3000}],"otrValues":[{"value":100,"thickness":3000}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.plexiglas.de"},
+    {"name":"Avantium YXY PEF film 100","family":"PET","company":"Avantium","isMetallized":false,"wvtrValues":[{"value":2.0,"thickness":100}],"otrValues":[{"value":0.40,"thickness":100}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.avantium.com"},
+    {"name":"Covestro Desmopan TPU film 50","family":"PU","company":"Covestro","isMetallized":false,"wvtrValues":[{"value":350,"thickness":50}],"otrValues":[{"value":160,"thickness":50}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.covestro.com"},
+    {"name":"Lubrizol Pellethane TPU film 100","family":"PU","company":"Lubrizol","isMetallized":false,"wvtrValues":[{"value":170,"thickness":100}],"otrValues":[{"value":80,"thickness":100}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Iggesund Invercote G FBB 300g","family":"Paper","company":"Iggesund","isMetallized":false,"wvtrValues":[{"value":110,"thickness":350}],"otrValues":[{"value":1100,"thickness":350}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","tdsLink":"https://www.iggesund.com"},
+    {"name":"Sappi Algro Fix SBS 350g coated","family":"Paper","company":"Sappi","isMetallized":false,"wvtrValues":[{"value":90,"thickness":400}],"otrValues":[{"value":950,"thickness":400}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","tdsLink":"https://www.sappi.com"},
+    {"name":"EVAL F101B Multi-T 20µm","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":1.55,"thickness":20},{"value":3.90,"thickness":20},{"value":8.00,"thickness":20}],"otrValues":[{"value":0.40,"thickness":20},{"value":1.20,"thickness":20},{"value":3.80,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":50},{"temperature":50,"humidity":50}],"hygroscopicBetaWVTR":0.038,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.055,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"EVAL E105B Multi-T 20µm","family":"EVOH","company":"Kuraray","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":20},{"value":2.5,"thickness":20},{"value":5.2,"thickness":20}],"otrValues":[{"value":1.50,"thickness":20},{"value":4.0,"thickness":20},{"value":10.0,"thickness":20}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":50},{"temperature":50,"humidity":50}],"hygroscopicBetaWVTR":0.022,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.028,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://eval.kuraray.com"},
+    {"name":"Bicor 30MA720 Multi-T","family":"PP","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":30},{"value":8.5,"thickness":30},{"value":13.0,"thickness":30}],"otrValues":[{"value":2480,"thickness":30},{"value":4100,"thickness":30},{"value":6500,"thickness":30}],"validConditions":[{"temperature":23,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Dow LDPE 150E Multi-T 50µm","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":10,"thickness":50},{"value":20,"thickness":50},{"value":35,"thickness":50}],"otrValues":[{"value":4300,"thickness":50},{"value":8500,"thickness":50},{"value":14000,"thickness":50}],"validConditions":[{"temperature":20,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Ineos HDPE 5502 Multi-T 50µm","family":"PE","company":"Ineos","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":50},{"value":5.5,"thickness":50},{"value":9.0,"thickness":50}],"otrValues":[{"value":1200,"thickness":50},{"value":2100,"thickness":50},{"value":3500,"thickness":50}],"validConditions":[{"temperature":20,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Mitsubishi MXD6 S6007 Multi-T 25µm","family":"PA","company":"Mitsubishi Gas Chemical","isMetallized":false,"wvtrValues":[{"value":60,"thickness":25},{"value":120,"thickness":25},{"value":210,"thickness":25}],"otrValues":[{"value":0.5,"thickness":25},{"value":1.8,"thickness":25},{"value":5.5,"thickness":25}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":50},{"temperature":50,"humidity":50}],"hygroscopicBetaOTR":0.050,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Lumirror S10 12 Multi-T","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":10,"thickness":12},{"value":17,"thickness":12},{"value":26,"thickness":12}],"otrValues":[{"value":60,"thickness":12},{"value":100,"thickness":12},{"value":160,"thickness":12}],"validConditions":[{"temperature":23,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Treofan BOPP NNO 30 Multi-T","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":2.5,"thickness":30},{"value":5.0,"thickness":30},{"value":8.5,"thickness":30}],"otrValues":[{"value":1200,"thickness":30},{"value":2600,"thickness":30},{"value":4800,"thickness":30}],"validConditions":[{"temperature":23,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Emblem BOPA 15N Multi-T","family":"PA","company":"Unitika","isMetallized":false,"wvtrValues":[{"value":80,"thickness":15},{"value":150,"thickness":15},{"value":260,"thickness":15}],"otrValues":[{"value":15,"thickness":15},{"value":25,"thickness":15},{"value":42,"thickness":15}],"validConditions":[{"temperature":23,"humidity":90},{"temperature":38,"humidity":90},{"temperature":50,"humidity":90}],"hygroscopicBetaWVTR":0.025,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0.060,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Mondi Functional Barrier Paper 60g","family":"Paper","company":"Mondi","isMetallized":false,"wvtrValues":[{"value":90,"thickness":65}],"otrValues":[{"value":400,"thickness":65}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mondigroup.com"},
+    {"name":"Smurfit Kappa BarrierBoard 300g","family":"Paper","company":"Smurfit Kappa","isMetallized":false,"wvtrValues":[{"value":80,"thickness":400}],"otrValues":[{"value":800,"thickness":400}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","tdsLink":"https://www.smurfitkappa.com"},
+    {"name":"Toray Lumirror X30 SiOx 12","family":"PET","company":"Toray","isMetallized":true,"wvtrValues":[{"value":0.06,"thickness":12}],"otrValues":[{"value":0.04,"thickness":12}],"validConditions":[{"temperature":40,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"Amcor AmPrima PE recyclable 80","family":"PE","company":"Amcor","isMetallized":false,"wvtrValues":[{"value":9.0,"thickness":80}],"otrValues":[{"value":3200,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Berry Global All-PE Stand-Up 120","family":"PE","company":"Berry Global","isMetallized":false,"wvtrValues":[{"value":6.5,"thickness":120}],"otrValues":[{"value":2500,"thickness":120}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.berryglobal.com"},
+    {"name":"Sealed Air Cryovac BL7 Barrier Lidding 90","family":"EVOH","company":"Sealed Air","isMetallized":false,"wvtrValues":[{"value":11,"thickness":90}],"otrValues":[{"value":0.90,"thickness":90}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.sealedair.com"},
+    {"name":"Constantia Aisafoil PET/Foil 35","family":"AL","company":"Constantia Flexibles","isMetallized":false,"wvtrValues":[{"value":0.001,"thickness":35}],"otrValues":[{"value":0.001,"thickness":35}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cflex.com"},
+    {"name":"Innovia Rayoface C35 OPP/PVDC","family":"PVC","company":"Innovia Films","isMetallized":false,"wvtrValues":[{"value":2.8,"thickness":35}],"otrValues":[{"value":5.5,"thickness":35}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.innoviafilms.com"},
+    {"name":"Klöckner Pentaplast Pentapharm COC 200","family":"Other","company":"Klöckner Pentaplast","isMetallized":false,"wvtrValues":[{"value":0.50,"thickness":200}],"otrValues":[{"value":50,"thickness":200}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.kpfilms.com"},
+    {"name":"Borealis Borstar LLDPE BL3901 60","family":"PE","company":"Borealis","isMetallized":false,"wvtrValues":[{"value":11,"thickness":60}],"otrValues":[{"value":3500,"thickness":60}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"ExxonMobil Vistamaxx mPP 50","family":"PP","company":"ExxonMobil","isMetallized":false,"wvtrValues":[{"value":6.8,"thickness":50}],"otrValues":[{"value":2200,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.exxonmobilchemical.com"},
+    {"name":"Uflex BOPET 12 UM","family":"PET","company":"Uflex","isMetallized":false,"wvtrValues":[{"value":17.5,"thickness":12}],"otrValues":[{"value":102,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.uflexltd.com"},
+    {"name":"Uflex MetPET 12","family":"PET","company":"Uflex","isMetallized":true,"wvtrValues":[{"value":0.50,"thickness":12}],"otrValues":[{"value":0.75,"thickness":12}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.uflexltd.com"},
+    {"name":"Jindal MetBOPP MO 25","family":"PP","company":"Jindal Films","isMetallized":true,"wvtrValues":[{"value":0.11,"thickness":25}],"otrValues":[{"value":16,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.jindalfilms.com"},
+    {"name":"Taghleef BO-PP Twister 30","family":"PP","company":"Taghleef Industries","isMetallized":false,"wvtrValues":[{"value":5.4,"thickness":30}],"otrValues":[{"value":2650,"thickness":30}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"SKC BOPET SH40 50","family":"PET","company":"SKC","isMetallized":false,"wvtrValues":[{"value":3.4,"thickness":50}],"otrValues":[{"value":20,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.skc.co.kr"},
+    {"name":"BASF Ecovio M2351 PLA/PBAT 30","family":"Other","company":"BASF","isMetallized":false,"wvtrValues":[{"value":380,"thickness":30}],"otrValues":[{"value":1600,"thickness":30}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.basf.com"},
+    {"name":"Toray Certrance VB BOPET 12","family":"PET","company":"Toray","isMetallized":true,"wvtrValues":[{"value":0.30,"thickness":12}],"otrValues":[{"value":0.50,"thickness":12}],"validConditions":[{"temperature":40,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.toray.com"},
+    {"name":"Treofan PP TopSeal 60","family":"PP","company":"Treofan","isMetallized":false,"wvtrValues":[{"value":3.8,"thickness":60}],"otrValues":[{"value":1000,"thickness":60}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Mondi Hybridflex mono-PE lidding 80","family":"PE","company":"Mondi","isMetallized":false,"wvtrValues":[{"value":8.0,"thickness":80}],"otrValues":[{"value":3100,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mondigroup.com"},
+    {"name":"Amcor Cryovac PA/EVOH/PE 120 Retort","family":"EVOH","company":"Amcor","isMetallized":false,"wvtrValues":[{"value":8.5,"thickness":120}],"otrValues":[{"value":0.70,"thickness":120}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Cosmo MetBOPP MG 20","family":"PP","company":"Cosmo Films","isMetallized":true,"wvtrValues":[{"value":0.12,"thickness":20}],"otrValues":[{"value":17,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"DuPont Mylar OL 23 PVOH coat","family":"PET","company":"DuPont Teijin Films","isMetallized":false,"wvtrValues":[{"value":9.0,"thickness":23}],"otrValues":[{"value":0.90,"thickness":23}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaOTR":0.075,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://usa.dupontteijinfilms.com"},
+    {"name":"Honeywell Aegis OX PA6 MXD6 100","family":"PA","company":"Honeywell","isMetallized":false,"wvtrValues":[{"value":130,"thickness":100}],"otrValues":[{"value":2.5,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"hygroscopicBetaOTR":0.042,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.honeywell.com"},
+    {"name":"Amcor Flexibles BOPET/EVOH 17","family":"EVOH","company":"Amcor","isMetallized":false,"wvtrValues":[{"value":5.5,"thickness":17}],"otrValues":[{"value":0.25,"thickness":17}],"validConditions":[{"temperature":23,"humidity":50}],"hygroscopicBetaOTR":0.035,"hygroscopicRefRHOTR":50,"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.amcor.com"},
+    {"name":"Dow Affinity PL1880G POE 80","family":"PE","company":"Dow","isMetallized":false,"wvtrValues":[{"value":20,"thickness":80}],"otrValues":[{"value":7500,"thickness":80}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.dow.com"},
+    {"name":"Constantia EcoLam foil-free barrier 90","family":"PE","company":"Constantia Flexibles","isMetallized":false,"wvtrValues":[{"value":7.0,"thickness":90}],"otrValues":[{"value":0.50,"thickness":90}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.cflex.com"},
+    {"name":"Mitsubishi Hostaphan BNL 19","family":"PET","company":"Mitsubishi Chemical","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":19}],"otrValues":[{"value":2.5,"thickness":19}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.mcfp.de"},
+    {"name":"Berry Global BOPP/mPP Heat Seal 25","family":"PP","company":"Berry Global","isMetallized":false,"wvtrValues":[{"value":6.0,"thickness":25}],"otrValues":[{"value":2900,"thickness":25}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"Evonik PLEXIGLAS Hi-Clear sheet 2mm","family":"Other","company":"Evonik","isMetallized":false,"wvtrValues":[{"value":1.5,"thickness":2000}],"otrValues":[{"value":34,"thickness":2000}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985","tdsLink":"https://www.plexiglas.de"},
+    {"name":"Toray XD22 PVDC coat BOPET 19","family":"PET","company":"Toray","isMetallized":false,"wvtrValues":[{"value":1.2,"thickness":19}],"otrValues":[{"value":2.5,"thickness":19}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"ASTM F1249","testMethodOTR":"ASTM D3985"},
+    {"name":"PET","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":500},{"value":2.0,"thickness":500},{"value":4.0,"thickness":500}],"otrValues":[{"value":150,"thickness":500},{"value":200,"thickness":500},{"value":350,"thickness":500}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":50},{"temperature":50,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Nylon 6 (multi-temp)","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":10.0,"thickness":100},{"value":25.0,"thickness":100},{"value":50.0,"thickness":100}],"otrValues":[{"value":30,"thickness":100},{"value":60,"thickness":100},{"value":120,"thickness":100}],"validConditions":[{"temperature":23,"humidity":60},{"temperature":38,"humidity":60},{"temperature":50,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"LDPE (multi-temp)","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":0.8,"thickness":100},{"value":1.5,"thickness":100},{"value":2.8,"thickness":100}],"otrValues":[{"value":800,"thickness":100},{"value":1200,"thickness":100},{"value":2000,"thickness":100}],"validConditions":[{"temperature":20,"humidity":50},{"temperature":30,"humidity":50},{"temperature":40,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"EVOH (multi-temp)","family":"EVOH","company":"","isMetallized":false,"wvtrValues":[{"value":0.05,"thickness":100},{"value":0.15,"thickness":100},{"value":0.40,"thickness":100}],"otrValues":[{"value":0.5,"thickness":100},{"value":1.5,"thickness":100},{"value":4.0,"thickness":100}],"validConditions":[{"temperature":23,"humidity":50},{"temperature":38,"humidity":50},{"temperature":50,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PP (multi-temp)","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":0.5,"thickness":50},{"value":1.0,"thickness":50},{"value":2.0,"thickness":50}],"otrValues":[{"value":500,"thickness":50},{"value":800,"thickness":50},{"value":1500,"thickness":50}],"validConditions":[{"temperature":25,"humidity":60},{"temperature":38,"humidity":60},{"temperature":50,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyurethane","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":0.3,"thickness":200}],"otrValues":[{"value":100,"thickness":200}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Low-Density Polyethylene (LDPE)","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":1.2,"thickness":100}],"otrValues":[{"value":7500,"thickness":100}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Biaxially Oriented Polypropylene (BOPP)","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":0.8,"thickness":50}],"otrValues":[{"value":2000,"thickness":50}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Rigid PVC","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":1.5,"thickness":500}],"otrValues":[{"value":130,"thickness":500}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyester (PET)","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":3.0,"thickness":500}],"otrValues":[{"value":69,"thickness":500}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Ethylene Vinyl Alcohol (EVOH)","family":"EVOH","company":"","isMetallized":false,"wvtrValues":[{"value":0.1,"thickness":100}],"otrValues":[{"value":0.15,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Aluminum","family":"AL","company":"","isMetallized":false,"wvtrValues":[{"value":0.01,"thickness":20}],"otrValues":[{"value":0.005,"thickness":20}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Nylon 6","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":25.0,"thickness":100}],"otrValues":[{"value":35,"thickness":100}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"High-Density Polyethylene (HDPE)","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":0.5,"thickness":1000}],"otrValues":[{"value":2800,"thickness":1000}],"validConditions":[{"temperature":38,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PVDC (Saran)","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":0.4,"thickness":50}],"otrValues":[{"value":6,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PET/EVOH Laminate","family":"EVOH","company":"","isMetallized":false,"wvtrValues":[{"value":0.2,"thickness":400}],"otrValues":[{"value":0.5,"thickness":400}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Expanded Polyethylene","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":15.0,"thickness":3000}],"otrValues":[{"value":5000,"thickness":3000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Butyl Rubber","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":50.0,"thickness":1000}],"otrValues":[{"value":200,"thickness":1000}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Silicone","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":1500.0,"thickness":100}],"otrValues":[{"value":15000,"thickness":100}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Tyvek","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":70.0,"thickness":500}],"otrValues":[{"value":8000,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Kraft Paper","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":500.0,"thickness":300}],"otrValues":[{"value":50000,"thickness":300}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Waxed Paper","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":300.0,"thickness":200}],"otrValues":[{"value":20000,"thickness":200}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PTFE Fabric","family":"PTFE","company":"","isMetallized":false,"wvtrValues":[{"value":1000.0,"thickness":100}],"otrValues":[{"value":20000,"thickness":100}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"GORE-TEX Membrane","family":"PTFE","company":"","isMetallized":false,"wvtrValues":[{"value":50.0,"thickness":500}],"otrValues":[{"value":5000,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Biaxially Oriented Polypropylene Film","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":20}],"otrValues":[{"value":2000,"thickness":20}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Flexible PVC Film","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":2.2,"thickness":150}],"otrValues":[{"value":2000,"thickness":150}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyurethane Film","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":0.4,"thickness":150}],"otrValues":[{"value":120,"thickness":150}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Crosslinked Polyethylene","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":80}],"otrValues":[{"value":6000,"thickness":80}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Nylon 6.6","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":20.0,"thickness":100}],"otrValues":[{"value":40,"thickness":100}],"validConditions":[{"temperature":38,"humidity":80}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Metallized Polyester","family":"PET","company":"","isMetallized":true,"wvtrValues":[{"value":0.8,"thickness":200}],"otrValues":[{"value":1.0,"thickness":200}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"High-Barrier Polyethylene","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":0.6,"thickness":300}],"otrValues":[{"value":3000,"thickness":300}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"High-Barrier Polypropylene","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":0.9,"thickness":250}],"otrValues":[{"value":2500,"thickness":250}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyimide (Kapton)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":45.0,"thickness":100}],"otrValues":[{"value":500,"thickness":100}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polysulfide","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":1.8,"thickness":500}],"otrValues":[{"value":80,"thickness":500}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyetherimide","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":40.0,"thickness":200}],"otrValues":[{"value":450,"thickness":200}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyether Ether Ketone (PEEK)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":500}],"otrValues":[{"value":150,"thickness":500}],"validConditions":[{"temperature":35,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polymethyl Methacrylate (PMMA)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":10.0,"thickness":1000}],"otrValues":[{"value":300,"thickness":1000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyvinylidene Fluoride (PVDF)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":500}],"otrValues":[{"value":200,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyoxymethylene (POM)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":10.0,"thickness":1000}],"otrValues":[{"value":250,"thickness":1000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polysulfone","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":12.0,"thickness":500}],"otrValues":[{"value":400,"thickness":500}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyvinyl Alcohol (PVA)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.2,"thickness":20}],"otrValues":[{"value":0.1,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PLA (Polylactic Acid)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":300}],"otrValues":[{"value":800,"thickness":300}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PHA (Polyhydroxyalkanoate)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":7.0,"thickness":400}],"otrValues":[{"value":600,"thickness":400}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Modified Starch","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":200.0,"thickness":500}],"otrValues":[{"value":15000,"thickness":500}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Regenerated Cellulose","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":400.0,"thickness":300}],"otrValues":[{"value":30000,"thickness":300}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Biodegradable Polyester","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":8.0,"thickness":600}],"otrValues":[{"value":700,"thickness":600}],"validConditions":[{"temperature":23,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PE/Clay Nanocomposite","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":0.4,"thickness":200}],"otrValues":[{"value":2000,"thickness":200}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PET/Silica Nanocomposite","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":0.7,"thickness":300}],"otrValues":[{"value":40,"thickness":300}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Multilayer PE/EVOH Film","family":"EVOH","company":"","isMetallized":false,"wvtrValues":[{"value":0.15,"thickness":400}],"otrValues":[{"value":0.3,"thickness":400}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Ceramic-Coated Polyethylene","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":0.2,"thickness":500}],"otrValues":[{"value":1.5,"thickness":500}],"validConditions":[{"temperature":35,"humidity":80}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Organic Barrier Polypropylene","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":300}],"otrValues":[{"value":1500,"thickness":300}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Breathable Waterproof Membrane","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":30.0,"thickness":800}],"otrValues":[{"value":3000,"thickness":800}],"validConditions":[{"temperature":25,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"OSB Panel","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":120.0,"thickness":12000}],"otrValues":[{"value":25000,"thickness":12000}],"validConditions":[{"temperature":20,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Fiberglass","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.05,"thickness":2000}],"otrValues":[{"value":50,"thickness":2000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Expanded PVC","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":4.0,"thickness":5000}],"otrValues":[{"value":800,"thickness":5000}],"validConditions":[{"temperature":30,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Extruded Polystyrene (XPS)","family":"PS","company":"","isMetallized":false,"wvtrValues":[{"value":0.3,"thickness":30000}],"otrValues":[{"value":3000,"thickness":30000}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Synthetic Leather","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":120.0,"thickness":1500}],"otrValues":[{"value":5000,"thickness":1500}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Food Wrap PVC Film","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":3.5,"thickness":15}],"otrValues":[{"value":2500,"thickness":15}],"validConditions":[{"temperature":25,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Silicone Gasket","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":500.0,"thickness":2000}],"otrValues":[{"value":20000,"thickness":2000}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Medical PU Film","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":1.8,"thickness":30}],"otrValues":[{"value":150,"thickness":30}],"validConditions":[{"temperature":37,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PTFE Technical Fabric","family":"PTFE","company":"","isMetallized":false,"wvtrValues":[{"value":950.0,"thickness":100}],"otrValues":[{"value":18000,"thickness":100}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Stainless Steel","family":"AL","company":"","isMetallized":false,"wvtrValues":[{"value":0.0,"thickness":500}],"otrValues":[{"value":0.0,"thickness":500}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Thick Aluminum","family":"AL","company":"","isMetallized":false,"wvtrValues":[{"value":0.0,"thickness":100}],"otrValues":[{"value":0.0,"thickness":100}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Corrugated Cardboard","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":800.0,"thickness":3000}],"otrValues":[{"value":60000,"thickness":3000}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Plywood","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":200.0,"thickness":10000}],"otrValues":[{"value":18000,"thickness":10000}],"validConditions":[{"temperature":20,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Porous Ceramic","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.5,"thickness":5000}],"otrValues":[{"value":100,"thickness":5000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Waterproof Polyester Fabric","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":45.0,"thickness":600}],"otrValues":[{"value":4000,"thickness":600}],"validConditions":[{"temperature":30,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PU-Coated Nylon Fabric","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":28.0,"thickness":400}],"otrValues":[{"value":2500,"thickness":400}],"validConditions":[{"temperature":35,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Breathable PTFE Fabric","family":"PTFE","company":"","isMetallized":false,"wvtrValues":[{"value":900.0,"thickness":200}],"otrValues":[{"value":15000,"thickness":200}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Silica Aerogel","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.02,"thickness":10000}],"otrValues":[{"value":0.5,"thickness":10000}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Graphene/Polymer Film","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.05,"thickness":1}],"otrValues":[{"value":0.02,"thickness":1}],"validConditions":[{"temperature":30,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"MOF/Polymer Membrane","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.1,"thickness":300}],"otrValues":[{"value":0.3,"thickness":300}],"validConditions":[{"temperature":38,"humidity":80}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Laminated Glass","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.0,"thickness":5000}],"otrValues":[{"value":0.0,"thickness":5000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"PVDC/PE Film","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":0.25,"thickness":150}],"otrValues":[{"value":5.0,"thickness":150}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Conductive Polymer","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":500}],"otrValues":[{"value":400,"thickness":500}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Nanocrystalline Cellulose Film","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":0.8,"thickness":10}],"otrValues":[{"value":2.0,"thickness":10}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Zeolite-Based Membrane","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.12,"thickness":700}],"otrValues":[{"value":0.8,"thickness":700}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Shape Memory Polymer","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":2.5,"thickness":400}],"otrValues":[{"value":300,"thickness":400}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Thermochromic Polymer Film","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":3.8,"thickness":300}],"otrValues":[{"value":500,"thickness":300}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Graphene/PET Composite","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":0.18,"thickness":250}],"otrValues":[{"value":15,"thickness":250}],"validConditions":[{"temperature":35,"humidity":80}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Antimicrobial Film","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":150}],"otrValues":[{"value":200,"thickness":150}],"validConditions":[{"temperature":30,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Piezoelectric Polymer","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":6.0,"thickness":500}],"otrValues":[{"value":600,"thickness":500}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Nanofiber Film","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.09,"thickness":50}],"otrValues":[{"value":1.0,"thickness":50}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Cellulose Acetate Film","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":2.2,"thickness":120}],"otrValues":[{"value":400,"thickness":120}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyamide Film","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":15.0,"thickness":80}],"otrValues":[{"value":50,"thickness":80}],"validConditions":[{"temperature":30,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Ethylene Vinyl Acetate (EVA)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.6,"thickness":400}],"otrValues":[{"value":4000,"thickness":400}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polypropylene Nonwoven Fabric","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":12.0,"thickness":200}],"otrValues":[{"value":3500,"thickness":200}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyethylene Terephthalate Nonwoven","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":7.0,"thickness":300}],"otrValues":[{"value":800,"thickness":300}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyvinyl Chloride Foam","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":2.5,"thickness":6000}],"otrValues":[{"value":600,"thickness":6000}],"validConditions":[{"temperature":30,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polycarbonate Sheet","family":"PC","company":"","isMetallized":false,"wvtrValues":[{"value":0.4,"thickness":1000}],"otrValues":[{"value":250,"thickness":1000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Acrylic Sheet","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":1.2,"thickness":2000}],"otrValues":[{"value":350,"thickness":2000}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyurethane Foam","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":10.0,"thickness":5000}],"otrValues":[{"value":2000,"thickness":5000}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyether Foam","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":8.0,"thickness":4000}],"otrValues":[{"value":1800,"thickness":4000}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyamide Foam","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":15.0,"thickness":3000}],"otrValues":[{"value":2500,"thickness":3000}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyethylene Foam","family":"PE","company":"","isMetallized":false,"wvtrValues":[{"value":5.0,"thickness":8000}],"otrValues":[{"value":4500,"thickness":8000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polypropylene Foam","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":4.0,"thickness":10000}],"otrValues":[{"value":3200,"thickness":10000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyurethane-Coated Fabric","family":"PU","company":"","isMetallized":false,"wvtrValues":[{"value":0.5,"thickness":200}],"otrValues":[{"value":80,"thickness":200}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyester-Coated Paper","family":"Paper","company":"","isMetallized":false,"wvtrValues":[{"value":1.8,"thickness":250}],"otrValues":[{"value":300,"thickness":250}],"validConditions":[{"temperature":25,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Expanded Polystyrene (EPS)","family":"PS","company":"","isMetallized":false,"wvtrValues":[{"value":0.4,"thickness":5000}],"otrValues":[{"value":2800,"thickness":5000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyethylene Naphthalate (PEN)","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":0.3,"thickness":100}],"otrValues":[{"value":25,"thickness":100}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyvinyl Butyral (PVB)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.2,"thickness":700}],"otrValues":[{"value":100,"thickness":700}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polytetrafluoroethylene (PTFE) Sheet","family":"PTFE","company":"","isMetallized":false,"wvtrValues":[{"value":1.0,"thickness":1000}],"otrValues":[{"value":150,"thickness":1000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyphenylene Sulfide (PPS)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":0.8,"thickness":500}],"otrValues":[{"value":120,"thickness":500}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyether Block Amide (PEBA)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":4.0,"thickness":300}],"otrValues":[{"value":600,"thickness":300}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyvinylidene Chloride (PVDC) Coating","family":"PVC","company":"","isMetallized":false,"wvtrValues":[{"value":0.1,"thickness":20}],"otrValues":[{"value":0.5,"thickness":20}],"validConditions":[{"temperature":38,"humidity":90}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyethylene Terephthalate Glycol (PETG)","family":"PET","company":"","isMetallized":false,"wvtrValues":[{"value":2.5,"thickness":800}],"otrValues":[{"value":80,"thickness":800}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polypropylene Random Copolymer (PP-R)","family":"PP","company":"","isMetallized":false,"wvtrValues":[{"value":0.9,"thickness":400}],"otrValues":[{"value":2200,"thickness":400}],"validConditions":[{"temperature":30,"humidity":60}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyoxymethylene Copolymer (Co-POM)","family":"Other","company":"","isMetallized":false,"wvtrValues":[{"value":1.5,"thickness":1000}],"otrValues":[{"value":280,"thickness":1000}],"validConditions":[{"temperature":25,"humidity":50}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50},
+    {"name":"Polyamide-Imide (PAI)","family":"PA","company":"","isMetallized":false,"wvtrValues":[{"value":0.7,"thickness":300}],"otrValues":[{"value":90,"thickness":300}],"validConditions":[{"temperature":35,"humidity":70}],"testMethodWVTR":"","testMethodOTR":"","tdsLink":"","hygroscopicBetaWVTR":0,"hygroscopicRefRHWVTR":50,"hygroscopicBetaOTR":0,"hygroscopicRefRHOTR":50}
   ]
 }
